@@ -1,30 +1,30 @@
 {
-  "name": "nx-angular-incremental-build",
+  "name": "app0",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/nx-angular-incremental-build/src",
+  "sourceRoot": "apps/app0/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/nx-angular-incremental-build",
-        "browser": "apps/nx-angular-incremental-build/src/main.ts",
+        "outputPath": "dist/apps/app0",
+        "browser": "apps/app0/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/nx-angular-incremental-build/tsconfig.app.json",
+        "tsConfig": "apps/app0/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/nx-angular-incremental-build/public"
+            "input": "apps/app0/public"
           }
         ],
-        "styles": ["apps/nx-angular-incremental-build/src/styles.scss"],
-        "server": "apps/nx-angular-incremental-build/src/main.server.ts",
+        "styles": ["apps/app0/src/styles.scss"],
+        "server": "apps/app0/src/main.server.ts",
         "ssr": {
-          "entry": "apps/nx-angular-incremental-build/src/server.ts"
+          "entry": "apps/app0/src/server.ts"
         },
         "outputMode": "server"
       },
@@ -57,19 +57,13 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "nx-angular-incremental-build:build:production"
+          "buildTarget": "app0:build:production"
         },
         "development": {
-          "buildTarget": "nx-angular-incremental-build:build:development"
+          "buildTarget": "app0:build:development"
         }
       },
       "defaultConfiguration": "development"
-    },
-    "extract-i18n": {
-      "executor": "@angular/build:extract-i18n",
-      "options": {
-        "buildTarget": "nx-angular-incremental-build:build"
-      }
     },
     "lint": {
       "executor": "@nx/eslint:lint"
@@ -78,16 +72,7 @@
       "executor": "@nx/vite:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "../../coverage/apps/nx-angular-incremental-build"
-      }
-    },
-    "serve-static": {
-      "continuous": true,
-      "executor": "@nx/web:file-server",
-      "options": {
-        "buildTarget": "nx-angular-incremental-build:build",
-        "staticFilePath": "dist/apps/nx-angular-incremental-build/browser",
-        "spa": true
+        "reportsDirectory": "../../coverage/apps/app0"
       }
     }
   }

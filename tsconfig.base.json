@@ -16,6 +16,18 @@
     "baseUrl": ".",
     "paths": {
       "@nx-angular-incremental-build/app-lib0": ["libs/app0/lib0/src/index.ts"],
+      "@nx-angular-incremental-build/app0-lib1": [
+        "libs/app0/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app0-lib2": [
+        "libs/app0/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app0-lib3": [
+        "libs/app0/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app0-lib4": [
+        "libs/app0/lib4/src/index.ts"
+      ],
       "@nx-angular-incremental-build/app0-shell": [
         "libs/app0/shell/src/index.ts"
       ]

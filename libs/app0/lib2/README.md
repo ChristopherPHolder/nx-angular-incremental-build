@@ -1,0 +1,3 @@
+# app0-lib2
+
+This library was generated with [Nx](https://nx.dev).

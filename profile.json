@@ -2,7 +2,7 @@
   {
     "name": "thread_name",
     "ph": "M",
-    "pid": 6796,
+    "pid": 40368,
     "tid": 0,
     "ts": 0,
     "args": {
@@ -13,9 +13,9 @@
     "name": "app0-lib0:build:production",
     "cat": "app0-lib0,build,production",
     "ph": "X",
-    "ts": 1755618319639000,
-    "dur": 22584000,
-    "pid": 6796,
+    "ts": 1755625030462000,
+    "dur": 95808000,
+    "pid": 40368,
     "tid": 0,
     "args": {
       "target": {
@@ -29,7 +29,7 @@
   {
     "name": "thread_name",
     "ph": "M",
-    "pid": 6796,
+    "pid": 40368,
     "tid": 1,
     "ts": 0,
     "args": {
@@ -40,9 +40,9 @@
     "name": "app0-shell:build:production",
     "cat": "app0-shell,build,production",
     "ph": "X",
-    "ts": 1755618342236000,
-    "dur": 2675000,
-    "pid": 6796,
+    "ts": 1755625126333000,
+    "dur": 3955000,
+    "pid": 40368,
     "tid": 1,
     "args": {
       "target": {
@@ -57,9 +57,9 @@
     "name": "app0:build:production",
     "cat": "app0,build,production",
     "ph": "X",
-    "ts": 1755618344922000,
-    "dur": 11915000,
-    "pid": 6796,
+    "ts": 1755625130331000,
+    "dur": 41066000,
+    "pid": 40368,
     "tid": 0,
     "args": {
       "target": {

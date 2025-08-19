@@ -2,7 +2,7 @@
   {
     "name": "thread_name",
     "ph": "M",
-    "pid": 37760,
+    "pid": 6796,
     "tid": 0,
     "ts": 0,
     "args": {
@@ -10,13 +10,40 @@
     }
   },
   {
+    "name": "app0-lib0:build:production",
+    "cat": "app0-lib0,build,production",
+    "ph": "X",
+    "ts": 1755618319639000,
+    "dur": 22584000,
+    "pid": 6796,
+    "tid": 0,
+    "args": {
+      "target": {
+        "project": "app0-lib0",
+        "target": "build",
+        "configuration": "production"
+      },
+      "status": "success"
+    }
+  },
+  {
+    "name": "thread_name",
+    "ph": "M",
+    "pid": 6796,
+    "tid": 1,
+    "ts": 0,
+    "args": {
+      "name": "Group #2"
+    }
+  },
+  {
     "name": "app0-shell:build:production",
     "cat": "app0-shell,build,production",
     "ph": "X",
-    "ts": 1755536276921000,
-    "dur": 2404000,
-    "pid": 37760,
-    "tid": 0,
+    "ts": 1755618342236000,
+    "dur": 2675000,
+    "pid": 6796,
+    "tid": 1,
     "args": {
       "target": {
         "project": "app0-shell",
@@ -27,23 +54,13 @@
     }
   },
   {
-    "name": "thread_name",
-    "ph": "M",
-    "pid": 37760,
-    "tid": 1,
-    "ts": 0,
-    "args": {
-      "name": "Group #2"
-    }
-  },
-  {
     "name": "app0:build:production",
     "cat": "app0,build,production",
     "ph": "X",
-    "ts": 1755536279351000,
-    "dur": 6288000,
-    "pid": 37760,
-    "tid": 1,
+    "ts": 1755618344922000,
+    "dur": 11915000,
+    "pid": 6796,
+    "tid": 0,
     "args": {
       "target": {
         "project": "app0",

@@ -1,0 +1,7 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app0-lib0-comp2620',
+  template: `<p>App0Lib0Comp2620 works!</p>`,
+})
+export class App0Lib0Comp2620 {}

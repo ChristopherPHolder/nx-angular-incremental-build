@@ -1,0 +1,8 @@
+import { Component } from '@angular/core';
+
+
+@Component({
+  selector: 'app0-lib1-sub-child-1210',
+  template: `<div class="sub-child">App0Lib1SubChild1210 works!</div>`,
+})
+export class App0Lib1SubChild1210 {}

@@ -2,7 +2,7 @@
   {
     "name": "thread_name",
     "ph": "M",
-    "pid": 26140,
+    "pid": 41994,
     "tid": 0,
     "ts": 0,
     "args": {
@@ -10,134 +10,12 @@
     }
   },
   {
-    "name": "thread_name",
-    "ph": "M",
-    "pid": 26140,
-    "tid": 1,
-    "ts": 0,
-    "args": {
-      "name": "Group #2"
-    }
-  },
-  {
-    "name": "thread_name",
-    "ph": "M",
-    "pid": 26140,
-    "tid": 2,
-    "ts": 0,
-    "args": {
-      "name": "Group #3"
-    }
-  },
-  {
-    "name": "app0-lib0:build:production",
-    "cat": "app0-lib0,build,production",
-    "ph": "X",
-    "ts": 1755626338716000,
-    "dur": 69607000,
-    "pid": 26140,
-    "tid": 2,
-    "args": {
-      "target": {
-        "project": "app0-lib0",
-        "target": "build",
-        "configuration": "production"
-      },
-      "status": "success"
-    }
-  },
-  {
-    "name": "app0-lib4:build:production",
-    "cat": "app0-lib4,build,production",
-    "ph": "X",
-    "ts": 1755626338716000,
-    "dur": 80019000,
-    "pid": 26140,
-    "tid": 0,
-    "args": {
-      "target": {
-        "project": "app0-lib4",
-        "target": "build",
-        "configuration": "production"
-      },
-      "status": "success"
-    }
-  },
-  {
-    "name": "app0-lib2:build:production",
-    "cat": "app0-lib2,build,production",
-    "ph": "X",
-    "ts": 1755626338716000,
-    "dur": 80254000,
-    "pid": 26140,
-    "tid": 1,
-    "args": {
-      "target": {
-        "project": "app0-lib2",
-        "target": "build",
-        "configuration": "production"
-      },
-      "status": "success"
-    }
-  },
-  {
-    "name": "app0-lib1:build:production",
-    "cat": "app0-lib1,build,production",
-    "ph": "X",
-    "ts": 1755626408382000,
-    "dur": 66063000,
-    "pid": 26140,
-    "tid": 2,
-    "args": {
-      "target": {
-        "project": "app0-lib1",
-        "target": "build",
-        "configuration": "production"
-      },
-      "status": "success"
-    }
-  },
-  {
-    "name": "app0-lib3:build:production",
-    "cat": "app0-lib3,build,production",
-    "ph": "X",
-    "ts": 1755626418791000,
-    "dur": 66302000,
-    "pid": 26140,
-    "tid": 0,
-    "args": {
-      "target": {
-        "project": "app0-lib3",
-        "target": "build",
-        "configuration": "production"
-      },
-      "status": "success"
-    }
-  },
-  {
-    "name": "app0-shell:build:production",
-    "cat": "app0-shell,build,production",
-    "ph": "X",
-    "ts": 1755626485148000,
-    "dur": 5432000,
-    "pid": 26140,
-    "tid": 1,
-    "args": {
-      "target": {
-        "project": "app0-shell",
-        "target": "build",
-        "configuration": "production"
-      },
-      "status": "success"
-    }
-  },
-  {
     "name": "app0:build:production",
     "cat": "app0,build,production",
     "ph": "X",
-    "ts": 1755626490646000,
-    "dur": 100823000,
-    "pid": 26140,
+    "ts": 1757096003844000,
+    "dur": 35401000,
+    "pid": 41994,
     "tid": 0,
     "args": {
       "target": {

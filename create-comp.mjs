@@ -9,8 +9,8 @@ const APP_NAME = 'app0'; // Change to app1, app2, etc.
 const LIB_NAME = 'lib4'; // Change to lib1, lib2, etc.
 
 // Component Configuration
-const CHILD_COMPONENTS_COUNT = 20; // Number of child components
-const SUB_CHILD_COMPONENTS_PER_CHILD = 500; // Number of sub-child components per child
+const CHILD_COMPONENTS_COUNT = 50; // Number of child components
+const SUB_CHILD_COMPONENTS_PER_CHILD = 100; // Number of sub-child components per child
 const TOTAL_SUB_CHILDREN = CHILD_COMPONENTS_COUNT * SUB_CHILD_COMPONENTS_PER_CHILD;
 
 // Directory structure

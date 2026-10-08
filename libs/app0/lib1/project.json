@@ -3,22 +3,28 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/app0/lib1/src",
   "prefix": "lib",
-  "tags": [],
   "projectType": "library",
+  "release": {
+    "version": {
+      "manifestRootsToUpdate": ["dist/{projectRoot}"],
+      "currentVersionResolver": "git-tag",
+      "fallbackCurrentVersionResolver": "disk"
+    }
+  },
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/app0/lib1/ng-package.json"
+        "project": "libs/app0/lib1/ng-package.json",
+        "tsConfig": "libs/app0/lib1/tsconfig.lib.json"
       },
       "configurations": {
         "production": {
           "tsConfig": "libs/app0/lib1/tsconfig.lib.prod.json"
         },
-        "development": {
-          "tsConfig": "libs/app0/lib1/tsconfig.lib.json"
-        }
+        "development": {}
       },
       "defaultConfiguration": "production"
     },
@@ -26,13 +32,6 @@
       "options": {
         "packageRoot": "dist/{projectRoot}"
       }
-    }
-  },
-  "release": {
-    "version": {
-      "manifestRootsToUpdate": ["dist/{projectRoot}"],
-      "currentVersionResolver": "git-tag",
-      "fallbackCurrentVersionResolver": "disk"
     }
   }
 }

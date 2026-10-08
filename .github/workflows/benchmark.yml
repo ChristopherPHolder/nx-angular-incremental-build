@@ -9,9 +9,9 @@ on:
         required: true
         default: 1
       demos:
-        description: 'Comma-separated demos to benchmark (app0, entry-points, entry-points-css)'
+        description: 'Comma-separated demos to benchmark (app0, entry-points, entry-points-css). Leave empty to only run the experiments'
         type: string
-        required: true
+        required: false
         default: 'app0,entry-points,entry-points-css'
       modes:
         description: 'Comma-separated modes to benchmark (source, ng-packagr, library)'
@@ -56,6 +56,7 @@ jobs:
   # One job per demo and mode, so the slow combinations run in parallel on separate runners
   benchmark:
     needs: matrix
+    if: needs.matrix.outputs.include != '[]'
     name: ${{ matrix.demo }} · ${{ matrix.mode }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
@@ -88,8 +89,8 @@ jobs:
           if-no-files-found: ignore
 
   report:
-    needs: benchmark
-    if: always()
+    needs: [matrix, benchmark]
+    if: always() && needs.matrix.outputs.include != '[]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

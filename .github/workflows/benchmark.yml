@@ -8,6 +8,11 @@ on:
         type: number
         required: true
         default: 3
+      demos:
+        description: 'Comma-separated demos to benchmark (app0, entry-points)'
+        type: string
+        required: true
+        default: 'app0,entry-points'
 
 permissions:
   contents: read
@@ -15,7 +20,7 @@ permissions:
 jobs:
   benchmark:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 360
     env:
       # The app build compiles the generated libs from source and exceeds Node's default heap
       NODE_OPTIONS: --max-old-space-size=8192
@@ -29,9 +34,10 @@ jobs:
 
       - run: npm ci --legacy-peer-deps
 
-      - run: node tools/benchmark.mjs --iterations="$ITERATIONS"
+      - run: node tools/benchmark.mjs --iterations="$ITERATIONS" --demos="$DEMOS"
         env:
           ITERATIONS: ${{ inputs.iterations }}
+          DEMOS: ${{ inputs.demos }}
 
       - uses: actions/upload-artifact@v4
         if: always()

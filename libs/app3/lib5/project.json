@@ -1,0 +1,51 @@
+{
+  "name": "app3-lib5",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/app3/lib5/src",
+  "prefix": "app3l5",
+  "projectType": "library",
+  "tags": [
+    "demo:entry-points",
+    "scope:app3"
+  ],
+  "targets": {
+    "build": {
+      "executor": "@angular/build:library",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "tsConfig": "libs/app3/lib5/tsconfig.lib.json",
+        "outputPath": "dist/libs/app3/lib5",
+        "inlineStyleLanguage": "scss"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/app3/lib5/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    },
+    "build-ng-packagr": {
+      "executor": "@nx/angular:package",
+      "outputs": [
+        "{workspaceRoot}/dist/ng-packagr/{projectRoot}"
+      ],
+      "dependsOn": [
+        "^build-ng-packagr"
+      ],
+      "options": {
+        "project": "libs/app3/lib5/ng-package.json",
+        "tsConfig": "libs/app3/lib5/tsconfig.lib.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/app3/lib5/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

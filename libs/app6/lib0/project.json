@@ -1,0 +1,51 @@
+{
+  "name": "app6-lib0",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/app6/lib0/src",
+  "prefix": "app6l0",
+  "projectType": "library",
+  "tags": [
+    "demo:entry-points",
+    "scope:app6"
+  ],
+  "targets": {
+    "build": {
+      "executor": "@angular/build:library",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "tsConfig": "libs/app6/lib0/tsconfig.lib.json",
+        "outputPath": "dist/libs/app6/lib0",
+        "inlineStyleLanguage": "scss"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/app6/lib0/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    },
+    "build-ng-packagr": {
+      "executor": "@nx/angular:package",
+      "outputs": [
+        "{workspaceRoot}/dist/ng-packagr/{projectRoot}"
+      ],
+      "dependsOn": [
+        "^build-ng-packagr"
+      ],
+      "options": {
+        "project": "libs/app6/lib0/ng-package.json",
+        "tsConfig": "libs/app6/lib0/tsconfig.lib.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/app6/lib0/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

@@ -21,7 +21,7 @@
  * are written to tmp/benchmark/results.json, and a Markdown summary to tmp/benchmark/summary.md
  * (also appended to the GitHub job summary when running in Actions).
  *
- * Usage: node tools/benchmark.mjs [--iterations=3] [--demos=app0,entry-points] [--modes=source,ng-packagr,library]
+ * Usage: node tools/benchmark.mjs [--iterations=3] [--demos=app0,entry-points] [--modes=source,ng-packagr,library] [--parallel=3]
  */
 
 import { spawn, execFileSync } from 'node:child_process';
@@ -41,6 +41,9 @@ if (!Number.isInteger(iterations) || iterations < 1) {
   console.error(`--iterations must be a positive integer, got "${iterations}"`);
   process.exit(1);
 }
+
+// How many Nx tasks run at once (Nx defaults to 3). Every mode uses the same value.
+const parallel = Number(process.argv.find((arg) => arg.startsWith('--parallel='))?.split('=')[1] ?? 3);
 
 const NX_ENV = {
   NX_DAEMON: 'false',
@@ -171,7 +174,7 @@ function processTreeRss(rootPid) {
 function runNx(args, profilePath) {
   return new Promise((resolve, reject) => {
     const start = performance.now();
-    const child = spawn('npx', ['nx', ...args, '--output-style=static'], {
+    const child = spawn('npx', ['nx', ...args, `--parallel=${parallel}`, '--output-style=static'], {
       cwd: ROOT,
       // Nx resolves NX_PROFILE relative to the workspace root
       env: { ...process.env, ...NX_ENV, NX_PROFILE: relative(ROOT, profilePath) },
@@ -252,6 +255,7 @@ async function main() {
     runner: process.env.RUNNER_NAME ?? null,
     nodeOptions: process.env.NODE_OPTIONS ?? null,
     ci: process.env.CI ?? null,
+    parallel,
     iterations,
     demos,
     runs,
@@ -266,15 +270,15 @@ async function main() {
   console.log(`\n${summary}`);
 }
 
-function renderSummary({ commit, node, iterations, demos, runs, nodeOptions, ci }) {
+function renderSummary({ commit, node, iterations, demos, runs, nodeOptions, ci, parallel }) {
   const lines = [
     '## Build benchmark: from source vs incremental (ng-packagr vs @angular/build:library)',
     '',
-    `Commit \`${commit.slice(0, 8)}\` · Node ${node} · ${iterations} iteration(s) · \`NODE_OPTIONS=${nodeOptions ?? ''}\` · \`CI=${ci ?? ''}\``,
+    `Commit \`${commit.slice(0, 8)}\` · Node ${node} · ${iterations} iteration(s) · \`NODE_OPTIONS=${nodeOptions ?? ''}\` · \`CI=${ci ?? ''}\` · \`--parallel=${parallel}\``,
     '',
     ...Object.entries(MODES).map(([, mode]) => `- **${mode.label}**: ${mode.description}`),
     '',
-    'Time and memory are the median across iterations (min–max in brackets). Memory is the peak RSS of the whole Nx process tree. "Lib tasks" and "App tasks" are the summed durations of the lib and app build tasks that actually ran (Nx runs up to 3 at once).',
+    'Time and memory are the median across iterations (min–max in brackets). Memory is the peak RSS of the whole Nx process tree. "Lib tasks" and "App tasks" are the summed durations of the lib and app build tasks that actually ran.',
   ];
 
   const seconds = (values) => stat(values, (s) => `${s.toFixed(1)}s`);

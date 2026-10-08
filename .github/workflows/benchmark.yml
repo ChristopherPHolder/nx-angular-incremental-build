@@ -13,6 +13,11 @@ on:
         type: string
         required: true
         default: 'app0,entry-points'
+      parallel:
+        description: 'Nx tasks to run at once. Building 3 entry-points apps from source at once needs ~17 GB, more than the 16 GB runner has'
+        type: number
+        required: true
+        default: 2
 
 permissions:
   contents: read
@@ -34,10 +39,11 @@ jobs:
 
       - run: npm ci --legacy-peer-deps
 
-      - run: node tools/benchmark.mjs --iterations="$ITERATIONS" --demos="$DEMOS"
+      - run: node tools/benchmark.mjs --iterations="$ITERATIONS" --demos="$DEMOS" --parallel="$PARALLEL"
         env:
           ITERATIONS: ${{ inputs.iterations }}
           DEMOS: ${{ inputs.demos }}
+          PARALLEL: ${{ inputs.parallel }}
 
       - uses: actions/upload-artifact@v4
         if: always()

@@ -1,0 +1,114 @@
+{
+  "name": "css-app6",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/css-app6/src",
+  "tags": [
+    "demo:css",
+    "type:app"
+  ],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:application",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "buildLibsFromSource": true,
+        "outputPath": "dist/apps/css-app6",
+        "browser": "apps/css-app6/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/css-app6/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/css-app6/public"
+          }
+        ],
+        "styles": [
+          "apps/css-app6/src/styles.scss"
+        ],
+        "server": "apps/css-app6/src/main.server.ts",
+        "ssr": {
+          "entry": "apps/css-app6/src/server.ts"
+        },
+        "outputMode": "server"
+      },
+      "configurations": {
+        "production": {
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "build-ng-packagr": {
+      "executor": "@nx/angular:application",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "dependsOn": [
+        "^build-ng-packagr"
+      ],
+      "options": {
+        "buildLibsFromSource": false,
+        "outputPath": "dist/ng-packagr/apps/css-app6",
+        "browser": "apps/css-app6/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/css-app6/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/css-app6/public"
+          }
+        ],
+        "styles": [
+          "apps/css-app6/src/styles.scss"
+        ],
+        "server": "apps/css-app6/src/main.server.ts",
+        "ssr": {
+          "entry": "apps/css-app6/src/server.ts"
+        },
+        "outputMode": "server"
+      },
+      "configurations": {
+        "production": {
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "continuous": true,
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "css-app6:build:production"
+        },
+        "development": {
+          "buildTarget": "css-app6:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

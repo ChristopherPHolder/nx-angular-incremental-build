@@ -9,10 +9,10 @@ on:
         required: true
         default: 1
       demos:
-        description: 'Comma-separated demos to benchmark (app0, entry-points)'
+        description: 'Comma-separated demos to benchmark (app0, entry-points, entry-points-css)'
         type: string
         required: true
-        default: 'app0,entry-points'
+        default: 'app0,entry-points,entry-points-css'
       modes:
         description: 'Comma-separated modes to benchmark (source, ng-packagr, library)'
         type: string

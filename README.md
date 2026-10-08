@@ -118,7 +118,7 @@ Each mode is measured in these scenarios, in this order:
 
 ### Metrics
 
-- **Wall time** of the whole `nx` command, including Nx's own overhead. With 85 projects and about 40,000 files, Nx needs 8–9s to load the project graph and hash the inputs.
+- **Wall time** of the whole `nx` command, including Nx's own overhead. With 50–100 projects and 20,000–40,000 files, Nx needs several seconds to load the project graph, hash the inputs and restore cached outputs: a full cache hit takes 1–11s.
 - **Peak memory**: the highest summed RSS of the `nx` process and all its descendants, sampled every 250 ms with `ps`. This includes worker threads (inside their process), esbuild (Go), the Sass compiler (Dart) and Rolldown (Rust).
 - **Lib tasks / app tasks**: the summed durations of the build tasks that actually ran (not replayed from the cache), read from the Nx task profile (`NX_PROFILE`). They are CPU-time-like numbers: Nx runs several tasks at once, so they add up to more than the wall time.
 
@@ -221,7 +221,7 @@ The CI results agree with the local ones, with bigger absolute numbers on the sm
   - That is the difference between incremental cold builds being 3.2× slower than building from source and being roughly as fast.
 - **Nx itself costs time at this scale.**
   - A full cache hit takes 3–11s, depending on how many task outputs have to be restored: 45 tasks in incremental mode, 6 when building from source.
-  - Every incremental run also pays 8–9s to load and hash 85 projects.
+  - That overhead is part of every run. It is why the local "one app lib changed" runs take 21–25s although their tasks add up to about 12–14s.
 
 ## Results: memory
 

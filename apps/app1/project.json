@@ -1,0 +1,114 @@
+{
+  "name": "app1",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/app1/src",
+  "tags": [
+    "demo:entry-points",
+    "type:app"
+  ],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:application",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "buildLibsFromSource": false,
+        "outputPath": "dist/apps/app1",
+        "browser": "apps/app1/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/app1/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/app1/public"
+          }
+        ],
+        "styles": [
+          "apps/app1/src/styles.scss"
+        ],
+        "server": "apps/app1/src/main.server.ts",
+        "ssr": {
+          "entry": "apps/app1/src/server.ts"
+        },
+        "outputMode": "server"
+      },
+      "configurations": {
+        "production": {
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "build-ng-packagr": {
+      "executor": "@nx/angular:application",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "dependsOn": [
+        "^build-ng-packagr"
+      ],
+      "options": {
+        "buildLibsFromSource": false,
+        "outputPath": "dist/ng-packagr/apps/app1",
+        "browser": "apps/app1/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/app1/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/app1/public"
+          }
+        ],
+        "styles": [
+          "apps/app1/src/styles.scss"
+        ],
+        "server": "apps/app1/src/main.server.ts",
+        "ssr": {
+          "entry": "apps/app1/src/server.ts"
+        },
+        "outputMode": "server"
+      },
+      "configurations": {
+        "production": {
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "continuous": true,
+      "executor": "@nx/angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "app1:build:production"
+        },
+        "development": {
+          "buildTarget": "app1:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "css-app3-lib3",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/css-app3/lib3/src",
+  "prefix": "css-app3l3",
+  "projectType": "library",
+  "tags": [
+    "demo:css",
+    "scope:css-app3"
+  ],
+  "targets": {
+    "build": {
+      "executor": "@angular/build:library",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "tsConfig": "libs/css-app3/lib3/tsconfig.lib.json",
+        "outputPath": "dist/libs/css-app3/lib3",
+        "inlineStyleLanguage": "css"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/css-app3/lib3/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    },
+    "build-ng-packagr": {
+      "executor": "@nx/angular:package",
+      "outputs": [
+        "{workspaceRoot}/dist/ng-packagr/{projectRoot}"
+      ],
+      "dependsOn": [
+        "^build-ng-packagr"
+      ],
+      "options": {
+        "project": "libs/css-app3/lib3/ng-package.json",
+        "tsConfig": "libs/css-app3/lib3/tsconfig.lib.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/css-app3/lib3/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

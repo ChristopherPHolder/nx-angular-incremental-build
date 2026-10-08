@@ -30,6 +30,474 @@
       ],
       "@nx-angular-incremental-build/app0-shell": [
         "libs/app0/shell/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib0": [
+        "libs/app1/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib0/*": [
+        "libs/app1/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib1": [
+        "libs/app1/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib1/*": [
+        "libs/app1/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib2": [
+        "libs/app1/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib2/*": [
+        "libs/app1/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib3": [
+        "libs/app1/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib3/*": [
+        "libs/app1/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib4": [
+        "libs/app1/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib4/*": [
+        "libs/app1/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib5": [
+        "libs/app1/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app1-lib5/*": [
+        "libs/app1/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib0": [
+        "libs/app2/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib0/*": [
+        "libs/app2/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib1": [
+        "libs/app2/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib1/*": [
+        "libs/app2/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib2": [
+        "libs/app2/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib2/*": [
+        "libs/app2/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib3": [
+        "libs/app2/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib3/*": [
+        "libs/app2/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib4": [
+        "libs/app2/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib4/*": [
+        "libs/app2/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib5": [
+        "libs/app2/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app2-lib5/*": [
+        "libs/app2/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib0": [
+        "libs/app3/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib0/*": [
+        "libs/app3/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib1": [
+        "libs/app3/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib1/*": [
+        "libs/app3/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib2": [
+        "libs/app3/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib2/*": [
+        "libs/app3/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib3": [
+        "libs/app3/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib3/*": [
+        "libs/app3/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib4": [
+        "libs/app3/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib4/*": [
+        "libs/app3/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib5": [
+        "libs/app3/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app3-lib5/*": [
+        "libs/app3/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib0": [
+        "libs/app4/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib0/*": [
+        "libs/app4/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib1": [
+        "libs/app4/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib1/*": [
+        "libs/app4/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib2": [
+        "libs/app4/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib2/*": [
+        "libs/app4/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib3": [
+        "libs/app4/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib3/*": [
+        "libs/app4/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib4": [
+        "libs/app4/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib4/*": [
+        "libs/app4/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib5": [
+        "libs/app4/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app4-lib5/*": [
+        "libs/app4/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib0": [
+        "libs/app5/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib0/*": [
+        "libs/app5/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib1": [
+        "libs/app5/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib1/*": [
+        "libs/app5/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib2": [
+        "libs/app5/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib2/*": [
+        "libs/app5/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib3": [
+        "libs/app5/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib3/*": [
+        "libs/app5/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib4": [
+        "libs/app5/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib4/*": [
+        "libs/app5/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib5": [
+        "libs/app5/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app5-lib5/*": [
+        "libs/app5/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib0": [
+        "libs/app6/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib0/*": [
+        "libs/app6/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib1": [
+        "libs/app6/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib1/*": [
+        "libs/app6/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib2": [
+        "libs/app6/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib2/*": [
+        "libs/app6/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib3": [
+        "libs/app6/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib3/*": [
+        "libs/app6/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib4": [
+        "libs/app6/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib4/*": [
+        "libs/app6/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib5": [
+        "libs/app6/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/app6-lib5/*": [
+        "libs/app6/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib0": [
+        "libs/css-app1/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib0/*": [
+        "libs/css-app1/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib1": [
+        "libs/css-app1/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib1/*": [
+        "libs/css-app1/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib2": [
+        "libs/css-app1/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib2/*": [
+        "libs/css-app1/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib3": [
+        "libs/css-app1/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib3/*": [
+        "libs/css-app1/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib4": [
+        "libs/css-app1/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib4/*": [
+        "libs/css-app1/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib5": [
+        "libs/css-app1/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app1-lib5/*": [
+        "libs/css-app1/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib0": [
+        "libs/css-app2/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib0/*": [
+        "libs/css-app2/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib1": [
+        "libs/css-app2/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib1/*": [
+        "libs/css-app2/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib2": [
+        "libs/css-app2/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib2/*": [
+        "libs/css-app2/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib3": [
+        "libs/css-app2/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib3/*": [
+        "libs/css-app2/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib4": [
+        "libs/css-app2/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib4/*": [
+        "libs/css-app2/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib5": [
+        "libs/css-app2/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app2-lib5/*": [
+        "libs/css-app2/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib0": [
+        "libs/css-app3/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib0/*": [
+        "libs/css-app3/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib1": [
+        "libs/css-app3/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib1/*": [
+        "libs/css-app3/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib2": [
+        "libs/css-app3/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib2/*": [
+        "libs/css-app3/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib3": [
+        "libs/css-app3/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib3/*": [
+        "libs/css-app3/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib4": [
+        "libs/css-app3/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib4/*": [
+        "libs/css-app3/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib5": [
+        "libs/css-app3/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app3-lib5/*": [
+        "libs/css-app3/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib0": [
+        "libs/css-app4/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib0/*": [
+        "libs/css-app4/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib1": [
+        "libs/css-app4/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib1/*": [
+        "libs/css-app4/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib2": [
+        "libs/css-app4/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib2/*": [
+        "libs/css-app4/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib3": [
+        "libs/css-app4/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib3/*": [
+        "libs/css-app4/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib4": [
+        "libs/css-app4/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib4/*": [
+        "libs/css-app4/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib5": [
+        "libs/css-app4/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app4-lib5/*": [
+        "libs/css-app4/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib0": [
+        "libs/css-app5/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib0/*": [
+        "libs/css-app5/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib1": [
+        "libs/css-app5/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib1/*": [
+        "libs/css-app5/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib2": [
+        "libs/css-app5/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib2/*": [
+        "libs/css-app5/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib3": [
+        "libs/css-app5/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib3/*": [
+        "libs/css-app5/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib4": [
+        "libs/css-app5/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib4/*": [
+        "libs/css-app5/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib5": [
+        "libs/css-app5/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app5-lib5/*": [
+        "libs/css-app5/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib0": [
+        "libs/css-app6/lib0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib0/*": [
+        "libs/css-app6/lib0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib1": [
+        "libs/css-app6/lib1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib1/*": [
+        "libs/css-app6/lib1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib2": [
+        "libs/css-app6/lib2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib2/*": [
+        "libs/css-app6/lib2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib3": [
+        "libs/css-app6/lib3/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib3/*": [
+        "libs/css-app6/lib3/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib4": [
+        "libs/css-app6/lib4/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib4/*": [
+        "libs/css-app6/lib4/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib5": [
+        "libs/css-app6/lib5/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-app6-lib5/*": [
+        "libs/css-app6/lib5/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui0": [
+        "libs/css-shared/ui0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui0/*": [
+        "libs/css-shared/ui0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui1": [
+        "libs/css-shared/ui1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui1/*": [
+        "libs/css-shared/ui1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui2": [
+        "libs/css-shared/ui2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui2/*": [
+        "libs/css-shared/ui2/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/shared-ui0": [
+        "libs/shared/ui0/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/shared-ui0/*": [
+        "libs/shared/ui0/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/shared-ui1": [
+        "libs/shared/ui1/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/shared-ui1/*": [
+        "libs/shared/ui1/*/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/shared-ui2": [
+        "libs/shared/ui2/src/index.ts"
+      ],
+      "@nx-angular-incremental-build/shared-ui2/*": [
+        "libs/shared/ui2/*/src/index.ts"
       ]
     },
     "strict": false,

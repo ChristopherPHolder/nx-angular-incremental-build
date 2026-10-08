@@ -14,8 +14,24 @@
   "tags": [],
   "targets": {
     "build": {
+      "executor": "@angular/build:library",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "tsConfig": "libs/app0/shell/tsconfig.lib.json",
+        "outputPath": "dist/libs/app0/shell"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/app0/shell/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    },
+    "build-ng-packagr": {
       "executor": "@nx/angular:package",
-      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "outputs": ["{workspaceRoot}/dist/ng-packagr/{projectRoot}"],
+      "dependsOn": ["^build-ng-packagr"],
       "options": {
         "project": "libs/app0/shell/ng-package.json",
         "tsConfig": "libs/app0/shell/tsconfig.lib.json"

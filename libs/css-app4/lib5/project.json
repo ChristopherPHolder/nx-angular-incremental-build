@@ -1,0 +1,51 @@
+{
+  "name": "css-app4-lib5",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/css-app4/lib5/src",
+  "prefix": "css-app4l5",
+  "projectType": "library",
+  "tags": [
+    "demo:css",
+    "scope:css-app4"
+  ],
+  "targets": {
+    "build": {
+      "executor": "@angular/build:library",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "tsConfig": "libs/css-app4/lib5/tsconfig.lib.json",
+        "outputPath": "dist/libs/css-app4/lib5",
+        "inlineStyleLanguage": "css"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/css-app4/lib5/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    },
+    "build-ng-packagr": {
+      "executor": "@nx/angular:package",
+      "outputs": [
+        "{workspaceRoot}/dist/ng-packagr/{projectRoot}"
+      ],
+      "dependsOn": [
+        "^build-ng-packagr"
+      ],
+      "options": {
+        "project": "libs/css-app4/lib5/ng-package.json",
+        "tsConfig": "libs/css-app4/lib5/tsconfig.lib.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/css-app4/lib5/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

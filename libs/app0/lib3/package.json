@@ -1,9 +1,12 @@
 {
   "name": "@nx-angular-incremental-build/app0-lib3",
   "version": "0.0.1",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "peerDependencies": {
-    "@angular/common": "^20.0.0",
-    "@angular/core": "^20.0.0"
+    "@angular/common": "^22.0.0",
+    "@angular/core": "^22.0.0"
   },
   "sideEffects": false
 }

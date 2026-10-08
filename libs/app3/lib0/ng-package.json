@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../dist/ng-packagr/libs/app3/lib0",
+  "inlineStyleLanguage": "scss",
+  "lib": {
+    "entryFile": "src/index.ts"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "extends": "./tsconfig.lib.json",
+  "compilerOptions": {
+    "declarationMap": false,
+    "paths": {
+      "@nx-angular-incremental-build/css-shared-ui0": [
+        "dist/libs/css-shared/ui0"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui0/*": [
+        "dist/libs/css-shared/ui0/*"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui1": [
+        "dist/libs/css-shared/ui1"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui1/*": [
+        "dist/libs/css-shared/ui1/*"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui2": [
+        "dist/libs/css-shared/ui2"
+      ],
+      "@nx-angular-incremental-build/css-shared-ui2/*": [
+        "dist/libs/css-shared/ui2/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "compilationMode": "partial"
+  }
+}

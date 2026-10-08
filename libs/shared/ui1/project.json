@@ -1,0 +1,51 @@
+{
+  "name": "shared-ui1",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/ui1/src",
+  "prefix": "ui1",
+  "projectType": "library",
+  "tags": [
+    "demo:entry-points",
+    "type:shared"
+  ],
+  "targets": {
+    "build": {
+      "executor": "@angular/build:library",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "tsConfig": "libs/shared/ui1/tsconfig.lib.json",
+        "outputPath": "dist/libs/shared/ui1",
+        "inlineStyleLanguage": "scss"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/ui1/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    },
+    "build-ng-packagr": {
+      "executor": "@nx/angular:package",
+      "outputs": [
+        "{workspaceRoot}/dist/ng-packagr/{projectRoot}"
+      ],
+      "dependsOn": [
+        "^build-ng-packagr"
+      ],
+      "options": {
+        "project": "libs/shared/ui1/ng-package.json",
+        "tsConfig": "libs/shared/ui1/tsconfig.lib.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/ui1/tsconfig.lib.prod.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

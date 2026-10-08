@@ -15,7 +15,7 @@
         "{options.outputPath}"
       ],
       "options": {
-        "buildLibsFromSource": true,
+        "buildLibsFromSource": false,
         "outputPath": "dist/apps/app5",
         "browser": "apps/app5/src/main.ts",
         "polyfills": [

@@ -109,14 +109,14 @@ const EXPERIMENTS = {
     // An empty NODE_OPTIONS leaves Node at its default heap limit (about 4 GB on 64-bit machines)
     const env = { NODE_OPTIONS: '' };
     return [
-      await measure('app0 from source, default heap', ['build', 'app0', '--excludeTaskDependencies'], env),
+      await measure('app0 from source, default heap', ['build', 'app0', '--excludeTaskDependencies', '--buildLibsFromSource=true'], env),
       await measure('app0 incremental (@angular/build:library), default heap', ['build', 'app0', '--buildLibsFromSource=false'], env),
       await measure('app0 incremental (ng-packagr), default heap', ['build-ng-packagr', 'app0'], env),
     ];
   },
 
   async threads() {
-    const build = ['build', 'app1', '--excludeTaskDependencies'];
+    const build = ['build', 'app1', '--excludeTaskDependencies', '--buildLibsFromSource=true'];
     return [
       await measure('Default', build, {}),
       await measure('NG_BUILD_PARALLEL_TS=0', build, { NG_BUILD_PARALLEL_TS: '0' }),
@@ -132,7 +132,7 @@ const EXPERIMENTS = {
     for (const heap of [4096, 3072, 2048, 1536]) {
       const env = { NODE_OPTIONS: `--max-old-space-size=${heap}` };
       results.push(
-        await measure(`From source, ${heap} MB heap`, ['build', 'app1', '--excludeTaskDependencies'], env),
+        await measure(`From source, ${heap} MB heap`, ['build', 'app1', '--excludeTaskDependencies', '--buildLibsFromSource=true'], env),
         await measure(`Incremental app build, ${heap} MB heap`, ['build', 'app1', '--excludeTaskDependencies', '--buildLibsFromSource=false'], env),
         await measure(`Biggest lib build (@angular/build:library), ${heap} MB heap`, ['build', 'app1-lib0', '--excludeTaskDependencies'], env),
         await measure(`Biggest lib build (ng-packagr), ${heap} MB heap`, ['build-ng-packagr', 'app1-lib0', '--excludeTaskDependencies'], env)
@@ -146,7 +146,7 @@ const EXPERIMENTS = {
     const results = [];
     for (const parallel of [1, 2, 3]) {
       results.push(
-        await measure(`All apps from source, --parallel=${parallel}`, ['run-many', '-t', 'build', '-p', apps, '--excludeTaskDependencies', `--parallel=${parallel}`])
+        await measure(`All apps from source, --parallel=${parallel}`, ['run-many', '-t', 'build', '-p', apps, '--excludeTaskDependencies', '--buildLibsFromSource=true', `--parallel=${parallel}`])
       );
     }
     results.push(

@@ -10,7 +10,7 @@
       "executor": "@nx/angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "buildLibsFromSource": true,
+        "buildLibsFromSource": false,
         "outputPath": "dist/apps/app0",
         "browser": "apps/app0/src/main.ts",
         "polyfills": ["zone.js"],

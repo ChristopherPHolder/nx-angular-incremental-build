@@ -87,7 +87,7 @@ const MODES = {
   source: {
     label: 'From source',
     description: 'every app compiles all of its libs from source (`buildLibsFromSource: true`)',
-    build: (apps) => ['run-many', '-t', 'build', '-p', apps.join(','), '--excludeTaskDependencies'],
+    build: (apps) => ['run-many', '-t', 'build', '-p', apps.join(','), '--excludeTaskDependencies', '--buildLibsFromSource=true'],
   },
   'ng-packagr': {
     label: 'Incremental (ng-packagr)',

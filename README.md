@@ -90,9 +90,11 @@ Each demo is built in three modes:
 
 | Mode | Command (per demo) | What happens |
 | --- | --- | --- |
-| **From source** | `nx run-many -t build -p <apps> --excludeTaskDependencies` | `buildLibsFromSource: true` (the default): every app compiles all the libs it uses from source |
+| **From source** | `nx run-many -t build -p <apps> --excludeTaskDependencies --buildLibsFromSource=true` | every app compiles all the libs it uses from source |
 | **Incremental (ng-packagr)** | `nx run-many -t build-ng-packagr -p <apps>` | every lib is built with ng-packagr first (`dependsOn: ["^build-ng-packagr"]`), then the apps are built against `dist/ng-packagr` with `buildLibsFromSource: false` |
 | **Incremental (`@angular/build:library`)** | `nx run-many -t build -p <apps> --buildLibsFromSource=false` | every lib is built with the new builder first (`dependsOn: ["^build"]`), then the apps are built against `dist` |
+
+Every app's `build` target defaults to `buildLibsFromSource: false`. Its `dependsOn: ["^build"]` builds the libs first anyway, so a plain `nx build app1` (or `nx run-many -t build` on CI) is an incremental build instead of building every lib twice.
 
 **How incremental builds consume `dist`.** With `buildLibsFromSource: false`, Nx's `@nx/angular:application` executor writes a temporary tsconfig for the app. Its `paths` point every buildable dependency at that dependency's build output instead of its sources. This works for any lib builder.
 

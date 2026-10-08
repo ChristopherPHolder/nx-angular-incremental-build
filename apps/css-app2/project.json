@@ -15,7 +15,7 @@
         "{options.outputPath}"
       ],
       "options": {
-        "buildLibsFromSource": true,
+        "buildLibsFromSource": false,
         "outputPath": "dist/apps/css-app2",
         "browser": "apps/css-app2/src/main.ts",
         "polyfills": [

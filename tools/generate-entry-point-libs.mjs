@@ -53,8 +53,14 @@ const DEMO_TAG = `demo:${DEMO || 'entry-points'}`;
 const appName = (a) => (DEMO ? `${DEMO}-app${a}` : `app${a}`);
 const sharedProjectName = (s) => (DEMO ? `${DEMO}-shared-ui${s}` : `shared-ui${s}`);
 const sharedRoot = (s) => (DEMO ? `libs/${DEMO}-shared/ui${s}` : `libs/shared/ui${s}`);
-/** Import specifier for another folder of the same lib, from `<lib>/<folder>/src/lib/*.ts`. */
-const folderImport = (pkg, folder) => (SPLIT ? `${pkg}/${folder}` : `../../../${folder}/src/index`);
+/** Where a folder's sources live: its own entry point (`<lib>/<folder>/src`), or under the primary entry point (`<lib>/src/<folder>`). */
+const folderDir = (root, folder) => (SPLIT ? `${root}/${folder}/src` : `${root}/src/${folder}`);
+/** Import specifier for another folder of the same lib, from `<folder dir>/lib/*.ts`. */
+const folderImport = (pkg, folder) => (SPLIT ? `${pkg}/${folder}` : `../../${folder}/index`);
+/** Writes files keyed by their path relative to the folder dir. */
+const writeFolder = (root, folder, files) => {
+  for (const [file, content] of Object.entries(files)) write(`${folderDir(root, folder)}/${file}`, content);
+};
 
 const write = (file, content) => {
   mkdirSync(dirname(file), { recursive: true });
@@ -64,8 +70,8 @@ const pascal = (s) => s.replace(/(^|-)(\w)/g, (_, __, c) => c.toUpperCase());
 
 function coreSource(prefix) {
   return {
-    'src/index.ts': `export * from './lib/card.component';\nexport * from './lib/badge.component';\nexport * from './lib/store.service';\n`,
-    'src/lib/store.service.ts': `import { Injectable, computed, signal } from '@angular/core';
+    'index.ts': `export * from './lib/card.component';\nexport * from './lib/badge.component';\nexport * from './lib/store.service';\n`,
+    'lib/store.service.ts': `import { Injectable, computed, signal } from '@angular/core';
 
 export type Status = 'draft' | 'active' | 'archived';
 
@@ -101,7 +107,7 @@ export class Store {
   );
 }
 `,
-    'src/lib/card.component.ts': `import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+    'lib/card.component.ts': `import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: '${prefix}-card',
@@ -119,7 +125,7 @@ export class Card {
   readonly accent = input(false);
 }
 `,
-    'src/lib/badge.component.ts': `import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+    'lib/badge.component.ts': `import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: '${prefix}-badge',
@@ -361,7 +367,7 @@ function entryPointSource({ prefix, pkg, ep, usesFor }) {
   for (let i = 0; i < COMPONENTS; i++) {
     const className = `${pascal(prefix)}${pascal(ep)}Item${i}`;
     classes.push(className);
-    files[`src/lib/item-${i}.component.ts`] = component({
+    files[`lib/item-${i}.component.ts`] = component({
       className,
       prefix,
       selector: `${prefix}-${ep}-item-${i}`,
@@ -372,7 +378,7 @@ function entryPointSource({ prefix, pkg, ep, usesFor }) {
     });
   }
   const page = `${pascal(prefix)}${pascal(ep)}Page`;
-  files['src/lib/page.component.ts'] = `import { ChangeDetectionStrategy, Component } from '@angular/core';
+  files['lib/page.component.ts'] = `import { ChangeDetectionStrategy, Component } from '@angular/core';
 ${classes.map((c, i) => `import { ${c} } from './item-${i}.component';`).join('\n')}
 
 @Component({
@@ -385,7 +391,7 @@ ${classes.map((_, i) => `    <${prefix}-${ep}-item-${i} />`).join('\n')}
 })
 export class ${page} {}
 `;
-  files['src/index.ts'] =
+  files['index.ts'] =
     classes.map((_, i) => `export * from './lib/item-${i}.component';`).join('\n') +
     `\nexport * from './lib/page.component';\n`;
   return { files, page, classes };
@@ -486,13 +492,13 @@ function generateSharedLib(s) {
     `${root}/src/index.ts`,
     SPLIT
       ? `export const ${pascal(project)}Widgets = ${JSON.stringify(widgets)};\n`
-      : ['core', ...widgets].map((folder) => `export * from '../${folder}/src/index';\n`).join('')
+      : ['core', ...widgets].map((folder) => `export * from './${folder}/index';\n`).join('')
   );
-  for (const [file, content] of Object.entries(coreSource(prefix))) write(`${root}/core/${file}`, content);
+  writeFolder(root, 'core', coreSource(prefix));
   const exportsByWidget = {};
   for (const ep of widgets) {
     const { files, classes } = entryPointSource({ prefix, pkg, ep });
-    for (const [file, content] of Object.entries(files)) write(`${root}/${ep}/${file}`, content);
+    writeFolder(root, ep, files);
     exportsByWidget[ep] = { className: classes[0], selector: `${prefix}-${ep}-item-0`, importPath: SPLIT ? `${pkg}/${ep}` : pkg };
   }
   writeLibConfig({ root, project, pkg, prefix, entryPoints: ['core', ...widgets], tags: [DEMO_TAG, 'type:shared'] });
@@ -506,13 +512,13 @@ function generateAppLib(app, l, sharedLibs) {
   const root = `libs/${app}/lib${l}`;
   const features = Array.from({ length: ENTRY_POINTS }, (_, f) => `feature-${f}`);
 
-  for (const [file, content] of Object.entries(coreSource(prefix))) write(`${root}/core/${file}`, content);
+  writeFolder(root, 'core', coreSource(prefix));
   const pages = [];
   for (const [f, ep] of features.entries()) {
     // Every feature entry point renders a widget from one of the shared libs
     const widget = sharedLibs[(f + l) % sharedLibs.length].exportsByWidget[`widget-${f}`];
     const { files, page } = entryPointSource({ prefix, pkg, ep, usesFor: (i) => (i === 0 ? widget : undefined) });
-    for (const [file, content] of Object.entries(files)) write(`${root}/${ep}/${file}`, content);
+    writeFolder(root, ep, files);
     pages.push({ ep, page });
   }
   write(`${root}/src/index.ts`, `export * from './lib/routes';\n`);
@@ -521,7 +527,7 @@ function generateAppLib(app, l, sharedLibs) {
     `import { Route } from '@angular/router';
 
 export const ${pascal(project)}Routes: Route[] = [
-${pages.map(({ ep, page }) => `  { path: '${ep}', loadComponent: () => import('${SPLIT ? `${pkg}/${ep}` : `../../${ep}/src/index`}').then((m) => m.${page}) },`).join('\n')}
+${pages.map(({ ep, page }) => `  { path: '${ep}', loadComponent: () => import('${SPLIT ? `${pkg}/${ep}` : `../${ep}/index`}').then((m) => m.${page}) },`).join('\n')}
 ];
 `
   );

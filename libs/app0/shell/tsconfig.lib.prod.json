@@ -1,7 +1,14 @@
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
-    "declarationMap": false
+    "declarationMap": false,
+    "paths": {
+      "@nx-angular-incremental-build/app-lib0": ["dist/libs/app0/lib0"],
+      "@nx-angular-incremental-build/app0-lib1": ["dist/libs/app0/lib1"],
+      "@nx-angular-incremental-build/app0-lib2": ["dist/libs/app0/lib2"],
+      "@nx-angular-incremental-build/app0-lib3": ["dist/libs/app0/lib3"],
+      "@nx-angular-incremental-build/app0-lib4": ["dist/libs/app0/lib4"]
+    }
   },
   "angularCompilerOptions": {
     "compilationMode": "partial",

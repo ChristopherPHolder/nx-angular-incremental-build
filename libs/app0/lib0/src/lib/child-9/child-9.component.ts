@@ -1,313 +1,1489 @@
 import { Component } from '@angular/core';
-import { App0Lib0SubChild900 } from './sub-children/sub-child-900.component';
-import { App0Lib0SubChild901 } from './sub-children/sub-child-901.component';
-import { App0Lib0SubChild902 } from './sub-children/sub-child-902.component';
-import { App0Lib0SubChild903 } from './sub-children/sub-child-903.component';
-import { App0Lib0SubChild904 } from './sub-children/sub-child-904.component';
-import { App0Lib0SubChild905 } from './sub-children/sub-child-905.component';
-import { App0Lib0SubChild906 } from './sub-children/sub-child-906.component';
-import { App0Lib0SubChild907 } from './sub-children/sub-child-907.component';
-import { App0Lib0SubChild908 } from './sub-children/sub-child-908.component';
-import { App0Lib0SubChild909 } from './sub-children/sub-child-909.component';
-import { App0Lib0SubChild910 } from './sub-children/sub-child-910.component';
-import { App0Lib0SubChild911 } from './sub-children/sub-child-911.component';
-import { App0Lib0SubChild912 } from './sub-children/sub-child-912.component';
-import { App0Lib0SubChild913 } from './sub-children/sub-child-913.component';
-import { App0Lib0SubChild914 } from './sub-children/sub-child-914.component';
-import { App0Lib0SubChild915 } from './sub-children/sub-child-915.component';
-import { App0Lib0SubChild916 } from './sub-children/sub-child-916.component';
-import { App0Lib0SubChild917 } from './sub-children/sub-child-917.component';
-import { App0Lib0SubChild918 } from './sub-children/sub-child-918.component';
-import { App0Lib0SubChild919 } from './sub-children/sub-child-919.component';
-import { App0Lib0SubChild920 } from './sub-children/sub-child-920.component';
-import { App0Lib0SubChild921 } from './sub-children/sub-child-921.component';
-import { App0Lib0SubChild922 } from './sub-children/sub-child-922.component';
-import { App0Lib0SubChild923 } from './sub-children/sub-child-923.component';
-import { App0Lib0SubChild924 } from './sub-children/sub-child-924.component';
-import { App0Lib0SubChild925 } from './sub-children/sub-child-925.component';
-import { App0Lib0SubChild926 } from './sub-children/sub-child-926.component';
-import { App0Lib0SubChild927 } from './sub-children/sub-child-927.component';
-import { App0Lib0SubChild928 } from './sub-children/sub-child-928.component';
-import { App0Lib0SubChild929 } from './sub-children/sub-child-929.component';
-import { App0Lib0SubChild930 } from './sub-children/sub-child-930.component';
-import { App0Lib0SubChild931 } from './sub-children/sub-child-931.component';
-import { App0Lib0SubChild932 } from './sub-children/sub-child-932.component';
-import { App0Lib0SubChild933 } from './sub-children/sub-child-933.component';
-import { App0Lib0SubChild934 } from './sub-children/sub-child-934.component';
-import { App0Lib0SubChild935 } from './sub-children/sub-child-935.component';
-import { App0Lib0SubChild936 } from './sub-children/sub-child-936.component';
-import { App0Lib0SubChild937 } from './sub-children/sub-child-937.component';
-import { App0Lib0SubChild938 } from './sub-children/sub-child-938.component';
-import { App0Lib0SubChild939 } from './sub-children/sub-child-939.component';
-import { App0Lib0SubChild940 } from './sub-children/sub-child-940.component';
-import { App0Lib0SubChild941 } from './sub-children/sub-child-941.component';
-import { App0Lib0SubChild942 } from './sub-children/sub-child-942.component';
-import { App0Lib0SubChild943 } from './sub-children/sub-child-943.component';
-import { App0Lib0SubChild944 } from './sub-children/sub-child-944.component';
-import { App0Lib0SubChild945 } from './sub-children/sub-child-945.component';
-import { App0Lib0SubChild946 } from './sub-children/sub-child-946.component';
-import { App0Lib0SubChild947 } from './sub-children/sub-child-947.component';
-import { App0Lib0SubChild948 } from './sub-children/sub-child-948.component';
-import { App0Lib0SubChild949 } from './sub-children/sub-child-949.component';
-import { App0Lib0SubChild950 } from './sub-children/sub-child-950.component';
-import { App0Lib0SubChild951 } from './sub-children/sub-child-951.component';
-import { App0Lib0SubChild952 } from './sub-children/sub-child-952.component';
-import { App0Lib0SubChild953 } from './sub-children/sub-child-953.component';
-import { App0Lib0SubChild954 } from './sub-children/sub-child-954.component';
-import { App0Lib0SubChild955 } from './sub-children/sub-child-955.component';
-import { App0Lib0SubChild956 } from './sub-children/sub-child-956.component';
-import { App0Lib0SubChild957 } from './sub-children/sub-child-957.component';
-import { App0Lib0SubChild958 } from './sub-children/sub-child-958.component';
-import { App0Lib0SubChild959 } from './sub-children/sub-child-959.component';
-import { App0Lib0SubChild960 } from './sub-children/sub-child-960.component';
-import { App0Lib0SubChild961 } from './sub-children/sub-child-961.component';
-import { App0Lib0SubChild962 } from './sub-children/sub-child-962.component';
-import { App0Lib0SubChild963 } from './sub-children/sub-child-963.component';
-import { App0Lib0SubChild964 } from './sub-children/sub-child-964.component';
-import { App0Lib0SubChild965 } from './sub-children/sub-child-965.component';
-import { App0Lib0SubChild966 } from './sub-children/sub-child-966.component';
-import { App0Lib0SubChild967 } from './sub-children/sub-child-967.component';
-import { App0Lib0SubChild968 } from './sub-children/sub-child-968.component';
-import { App0Lib0SubChild969 } from './sub-children/sub-child-969.component';
-import { App0Lib0SubChild970 } from './sub-children/sub-child-970.component';
-import { App0Lib0SubChild971 } from './sub-children/sub-child-971.component';
-import { App0Lib0SubChild972 } from './sub-children/sub-child-972.component';
-import { App0Lib0SubChild973 } from './sub-children/sub-child-973.component';
-import { App0Lib0SubChild974 } from './sub-children/sub-child-974.component';
-import { App0Lib0SubChild975 } from './sub-children/sub-child-975.component';
-import { App0Lib0SubChild976 } from './sub-children/sub-child-976.component';
-import { App0Lib0SubChild977 } from './sub-children/sub-child-977.component';
-import { App0Lib0SubChild978 } from './sub-children/sub-child-978.component';
-import { App0Lib0SubChild979 } from './sub-children/sub-child-979.component';
-import { App0Lib0SubChild980 } from './sub-children/sub-child-980.component';
-import { App0Lib0SubChild981 } from './sub-children/sub-child-981.component';
-import { App0Lib0SubChild982 } from './sub-children/sub-child-982.component';
-import { App0Lib0SubChild983 } from './sub-children/sub-child-983.component';
-import { App0Lib0SubChild984 } from './sub-children/sub-child-984.component';
-import { App0Lib0SubChild985 } from './sub-children/sub-child-985.component';
-import { App0Lib0SubChild986 } from './sub-children/sub-child-986.component';
-import { App0Lib0SubChild987 } from './sub-children/sub-child-987.component';
-import { App0Lib0SubChild988 } from './sub-children/sub-child-988.component';
-import { App0Lib0SubChild989 } from './sub-children/sub-child-989.component';
-import { App0Lib0SubChild990 } from './sub-children/sub-child-990.component';
-import { App0Lib0SubChild991 } from './sub-children/sub-child-991.component';
-import { App0Lib0SubChild992 } from './sub-children/sub-child-992.component';
-import { App0Lib0SubChild993 } from './sub-children/sub-child-993.component';
-import { App0Lib0SubChild994 } from './sub-children/sub-child-994.component';
-import { App0Lib0SubChild995 } from './sub-children/sub-child-995.component';
-import { App0Lib0SubChild996 } from './sub-children/sub-child-996.component';
-import { App0Lib0SubChild997 } from './sub-children/sub-child-997.component';
-import { App0Lib0SubChild998 } from './sub-children/sub-child-998.component';
-import { App0Lib0SubChild999 } from './sub-children/sub-child-999.component';
+import { App0Lib0SubChild270 } from './sub-children/sub-child-270.component';
+import { App0Lib0SubChild271 } from './sub-children/sub-child-271.component';
+import { App0Lib0SubChild272 } from './sub-children/sub-child-272.component';
+import { App0Lib0SubChild273 } from './sub-children/sub-child-273.component';
+import { App0Lib0SubChild274 } from './sub-children/sub-child-274.component';
+import { App0Lib0SubChild275 } from './sub-children/sub-child-275.component';
+import { App0Lib0SubChild276 } from './sub-children/sub-child-276.component';
+import { App0Lib0SubChild277 } from './sub-children/sub-child-277.component';
+import { App0Lib0SubChild278 } from './sub-children/sub-child-278.component';
+import { App0Lib0SubChild279 } from './sub-children/sub-child-279.component';
+import { App0Lib0SubChild280 } from './sub-children/sub-child-280.component';
+import { App0Lib0SubChild281 } from './sub-children/sub-child-281.component';
+import { App0Lib0SubChild282 } from './sub-children/sub-child-282.component';
+import { App0Lib0SubChild283 } from './sub-children/sub-child-283.component';
+import { App0Lib0SubChild284 } from './sub-children/sub-child-284.component';
+import { App0Lib0SubChild285 } from './sub-children/sub-child-285.component';
+import { App0Lib0SubChild286 } from './sub-children/sub-child-286.component';
+import { App0Lib0SubChild287 } from './sub-children/sub-child-287.component';
+import { App0Lib0SubChild288 } from './sub-children/sub-child-288.component';
+import { App0Lib0SubChild289 } from './sub-children/sub-child-289.component';
+import { App0Lib0SubChild290 } from './sub-children/sub-child-290.component';
+import { App0Lib0SubChild291 } from './sub-children/sub-child-291.component';
+import { App0Lib0SubChild292 } from './sub-children/sub-child-292.component';
+import { App0Lib0SubChild293 } from './sub-children/sub-child-293.component';
+import { App0Lib0SubChild294 } from './sub-children/sub-child-294.component';
+import { App0Lib0SubChild295 } from './sub-children/sub-child-295.component';
+import { App0Lib0SubChild296 } from './sub-children/sub-child-296.component';
+import { App0Lib0SubChild297 } from './sub-children/sub-child-297.component';
+import { App0Lib0SubChild298 } from './sub-children/sub-child-298.component';
+import { App0Lib0SubChild299 } from './sub-children/sub-child-299.component';
 
 @Component({
   selector: 'app0-lib0-child-9',
   template: `
     <div class="child-component">
-      <h3>App0Lib0Child9</h3>
-      <p>This is child component 9</p>
-      <app0-lib0-sub-child-900 />
-      <app0-lib0-sub-child-901 />
-      <app0-lib0-sub-child-902 />
-      <app0-lib0-sub-child-903 />
-      <app0-lib0-sub-child-904 />
-      <app0-lib0-sub-child-905 />
-      <app0-lib0-sub-child-906 />
-      <app0-lib0-sub-child-907 />
-      <app0-lib0-sub-child-908 />
-      <app0-lib0-sub-child-909 />
-      <app0-lib0-sub-child-910 />
-      <app0-lib0-sub-child-911 />
-      <app0-lib0-sub-child-912 />
-      <app0-lib0-sub-child-913 />
-      <app0-lib0-sub-child-914 />
-      <app0-lib0-sub-child-915 />
-      <app0-lib0-sub-child-916 />
-      <app0-lib0-sub-child-917 />
-      <app0-lib0-sub-child-918 />
-      <app0-lib0-sub-child-919 />
-      <app0-lib0-sub-child-920 />
-      <app0-lib0-sub-child-921 />
-      <app0-lib0-sub-child-922 />
-      <app0-lib0-sub-child-923 />
-      <app0-lib0-sub-child-924 />
-      <app0-lib0-sub-child-925 />
-      <app0-lib0-sub-child-926 />
-      <app0-lib0-sub-child-927 />
-      <app0-lib0-sub-child-928 />
-      <app0-lib0-sub-child-929 />
-      <app0-lib0-sub-child-930 />
-      <app0-lib0-sub-child-931 />
-      <app0-lib0-sub-child-932 />
-      <app0-lib0-sub-child-933 />
-      <app0-lib0-sub-child-934 />
-      <app0-lib0-sub-child-935 />
-      <app0-lib0-sub-child-936 />
-      <app0-lib0-sub-child-937 />
-      <app0-lib0-sub-child-938 />
-      <app0-lib0-sub-child-939 />
-      <app0-lib0-sub-child-940 />
-      <app0-lib0-sub-child-941 />
-      <app0-lib0-sub-child-942 />
-      <app0-lib0-sub-child-943 />
-      <app0-lib0-sub-child-944 />
-      <app0-lib0-sub-child-945 />
-      <app0-lib0-sub-child-946 />
-      <app0-lib0-sub-child-947 />
-      <app0-lib0-sub-child-948 />
-      <app0-lib0-sub-child-949 />
-      <app0-lib0-sub-child-950 />
-      <app0-lib0-sub-child-951 />
-      <app0-lib0-sub-child-952 />
-      <app0-lib0-sub-child-953 />
-      <app0-lib0-sub-child-954 />
-      <app0-lib0-sub-child-955 />
-      <app0-lib0-sub-child-956 />
-      <app0-lib0-sub-child-957 />
-      <app0-lib0-sub-child-958 />
-      <app0-lib0-sub-child-959 />
-      <app0-lib0-sub-child-960 />
-      <app0-lib0-sub-child-961 />
-      <app0-lib0-sub-child-962 />
-      <app0-lib0-sub-child-963 />
-      <app0-lib0-sub-child-964 />
-      <app0-lib0-sub-child-965 />
-      <app0-lib0-sub-child-966 />
-      <app0-lib0-sub-child-967 />
-      <app0-lib0-sub-child-968 />
-      <app0-lib0-sub-child-969 />
-      <app0-lib0-sub-child-970 />
-      <app0-lib0-sub-child-971 />
-      <app0-lib0-sub-child-972 />
-      <app0-lib0-sub-child-973 />
-      <app0-lib0-sub-child-974 />
-      <app0-lib0-sub-child-975 />
-      <app0-lib0-sub-child-976 />
-      <app0-lib0-sub-child-977 />
-      <app0-lib0-sub-child-978 />
-      <app0-lib0-sub-child-979 />
-      <app0-lib0-sub-child-980 />
-      <app0-lib0-sub-child-981 />
-      <app0-lib0-sub-child-982 />
-      <app0-lib0-sub-child-983 />
-      <app0-lib0-sub-child-984 />
-      <app0-lib0-sub-child-985 />
-      <app0-lib0-sub-child-986 />
-      <app0-lib0-sub-child-987 />
-      <app0-lib0-sub-child-988 />
-      <app0-lib0-sub-child-989 />
-      <app0-lib0-sub-child-990 />
-      <app0-lib0-sub-child-991 />
-      <app0-lib0-sub-child-992 />
-      <app0-lib0-sub-child-993 />
-      <app0-lib0-sub-child-994 />
-      <app0-lib0-sub-child-995 />
-      <app0-lib0-sub-child-996 />
-      <app0-lib0-sub-child-997 />
-      <app0-lib0-sub-child-998 />
-      <app0-lib0-sub-child-999 />
+      <div class="child-header">
+        <h3>{{title}}</h3>
+        <div class="child-controls">
+          @if (isExpanded) {
+            <button (click)="collapse()" class="btn btn-sm">Collapse</button>
+          } @else {
+            <button (click)="expand()" class="btn btn-sm">Expand</button>
+          }
+          <button (click)="toggleMode()" class="btn btn-sm" [class]="mode === 'grid' ? 'btn-primary' : 'btn-secondary'">
+            {{mode === 'grid' ? 'List View' : 'Grid View'}}
+          </button>
+        </div>
+      </div>
+      
+      <div class="child-info">
+        <p>Child component 9 | Status: {{status}} | Items: {{subChildren.length}}</p>
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width.%]="progress"></div>
+        </div>
+      </div>
+      
+      @if (isExpanded) {
+        <div class="sub-children-container" [class]="'mode-' + mode">
+          @switch (status) {
+            @case ('loading') {
+              <div class="loading-state">
+                <p>Loading sub-components...</p>
+                <div class="spinner"></div>
+              </div>
+            }
+            @case ('error') {
+              <div class="error-state">
+                <p>Error loading components</p>
+                <button (click)="retry()" class="btn btn-warning">Retry</button>
+              </div>
+            }
+            @case ('loaded') {
+              @if (mode === 'grid') {
+                <div class="grid-layout">
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(0)) {
+                      <app0-lib0-sub-child-270 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-270...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-270</p>
+                        <button (click)="retryLoadComponent(0)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(1)) {
+                      <app0-lib0-sub-child-271 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-271...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-271</p>
+                        <button (click)="retryLoadComponent(1)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(2)) {
+                      <app0-lib0-sub-child-272 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-272...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-272</p>
+                        <button (click)="retryLoadComponent(2)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(3)) {
+                      <app0-lib0-sub-child-273 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-273...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-273</p>
+                        <button (click)="retryLoadComponent(3)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(4)) {
+                      <app0-lib0-sub-child-274 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-274...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-274</p>
+                        <button (click)="retryLoadComponent(4)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(5)) {
+                      <app0-lib0-sub-child-275 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-275...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-275</p>
+                        <button (click)="retryLoadComponent(5)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(6)) {
+                      <app0-lib0-sub-child-276 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-276...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-276</p>
+                        <button (click)="retryLoadComponent(6)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(7)) {
+                      <app0-lib0-sub-child-277 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-277...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-277</p>
+                        <button (click)="retryLoadComponent(7)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(8)) {
+                      <app0-lib0-sub-child-278 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-278...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-278</p>
+                        <button (click)="retryLoadComponent(8)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(9)) {
+                      <app0-lib0-sub-child-279 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-279...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-279</p>
+                        <button (click)="retryLoadComponent(9)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(10)) {
+                      <app0-lib0-sub-child-280 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-280...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-280</p>
+                        <button (click)="retryLoadComponent(10)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(11)) {
+                      <app0-lib0-sub-child-281 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-281...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-281</p>
+                        <button (click)="retryLoadComponent(11)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(12)) {
+                      <app0-lib0-sub-child-282 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-282...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-282</p>
+                        <button (click)="retryLoadComponent(12)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(13)) {
+                      <app0-lib0-sub-child-283 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-283...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-283</p>
+                        <button (click)="retryLoadComponent(13)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(14)) {
+                      <app0-lib0-sub-child-284 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-284...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-284</p>
+                        <button (click)="retryLoadComponent(14)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(15)) {
+                      <app0-lib0-sub-child-285 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-285...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-285</p>
+                        <button (click)="retryLoadComponent(15)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(16)) {
+                      <app0-lib0-sub-child-286 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-286...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-286</p>
+                        <button (click)="retryLoadComponent(16)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(17)) {
+                      <app0-lib0-sub-child-287 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-287...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-287</p>
+                        <button (click)="retryLoadComponent(17)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(18)) {
+                      <app0-lib0-sub-child-288 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-288...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-288</p>
+                        <button (click)="retryLoadComponent(18)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(19)) {
+                      <app0-lib0-sub-child-289 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-289...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-289</p>
+                        <button (click)="retryLoadComponent(19)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(20)) {
+                      <app0-lib0-sub-child-290 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-290...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-290</p>
+                        <button (click)="retryLoadComponent(20)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(21)) {
+                      <app0-lib0-sub-child-291 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-291...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-291</p>
+                        <button (click)="retryLoadComponent(21)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(22)) {
+                      <app0-lib0-sub-child-292 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-292...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-292</p>
+                        <button (click)="retryLoadComponent(22)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(23)) {
+                      <app0-lib0-sub-child-293 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-293...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-293</p>
+                        <button (click)="retryLoadComponent(23)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(24)) {
+                      <app0-lib0-sub-child-294 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-294...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-294</p>
+                        <button (click)="retryLoadComponent(24)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(25)) {
+                      <app0-lib0-sub-child-295 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-295...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-295</p>
+                        <button (click)="retryLoadComponent(25)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(26)) {
+                      <app0-lib0-sub-child-296 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-296...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-296</p>
+                        <button (click)="retryLoadComponent(26)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(27)) {
+                      <app0-lib0-sub-child-297 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-297...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-297</p>
+                        <button (click)="retryLoadComponent(27)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(28)) {
+                      <app0-lib0-sub-child-298 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-298...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-298</p>
+                        <button (click)="retryLoadComponent(28)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="grid-item">
+                    @defer (on viewport; when shouldLoadComponent(29)) {
+                      <app0-lib0-sub-child-299 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <div class="skeleton"></div>
+                        <p>Loading app0-lib0-sub-child-299...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Failed to load app0-lib0-sub-child-299</p>
+                        <button (click)="retryLoadComponent(29)" class="btn btn-sm">Retry</button>
+                      </div>
+                    }
+                  </div>
+                </div>
+              } @else {
+                <div class="list-layout">
+                  <div class="list-item" [class]="0 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">1</span>
+                      <span class="item-selector">app0-lib0-sub-child-270</span>
+                      <button (click)="toggleComponentLoad(0)" class="btn btn-xs">
+                        {{isComponentLoaded(0) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn0); when isComponentLoaded(0)) {
+                      <app0-lib0-sub-child-270 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-270</p>
+                        <button #loadBtn0 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-270...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-270</p>
+                        <button (click)="retryLoadComponent(0)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="1 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">2</span>
+                      <span class="item-selector">app0-lib0-sub-child-271</span>
+                      <button (click)="toggleComponentLoad(1)" class="btn btn-xs">
+                        {{isComponentLoaded(1) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn1); when isComponentLoaded(1)) {
+                      <app0-lib0-sub-child-271 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-271</p>
+                        <button #loadBtn1 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-271...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-271</p>
+                        <button (click)="retryLoadComponent(1)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="2 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">3</span>
+                      <span class="item-selector">app0-lib0-sub-child-272</span>
+                      <button (click)="toggleComponentLoad(2)" class="btn btn-xs">
+                        {{isComponentLoaded(2) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn2); when isComponentLoaded(2)) {
+                      <app0-lib0-sub-child-272 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-272</p>
+                        <button #loadBtn2 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-272...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-272</p>
+                        <button (click)="retryLoadComponent(2)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="3 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">4</span>
+                      <span class="item-selector">app0-lib0-sub-child-273</span>
+                      <button (click)="toggleComponentLoad(3)" class="btn btn-xs">
+                        {{isComponentLoaded(3) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn3); when isComponentLoaded(3)) {
+                      <app0-lib0-sub-child-273 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-273</p>
+                        <button #loadBtn3 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-273...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-273</p>
+                        <button (click)="retryLoadComponent(3)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="4 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">5</span>
+                      <span class="item-selector">app0-lib0-sub-child-274</span>
+                      <button (click)="toggleComponentLoad(4)" class="btn btn-xs">
+                        {{isComponentLoaded(4) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn4); when isComponentLoaded(4)) {
+                      <app0-lib0-sub-child-274 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-274</p>
+                        <button #loadBtn4 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-274...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-274</p>
+                        <button (click)="retryLoadComponent(4)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="5 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">6</span>
+                      <span class="item-selector">app0-lib0-sub-child-275</span>
+                      <button (click)="toggleComponentLoad(5)" class="btn btn-xs">
+                        {{isComponentLoaded(5) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn5); when isComponentLoaded(5)) {
+                      <app0-lib0-sub-child-275 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-275</p>
+                        <button #loadBtn5 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-275...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-275</p>
+                        <button (click)="retryLoadComponent(5)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="6 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">7</span>
+                      <span class="item-selector">app0-lib0-sub-child-276</span>
+                      <button (click)="toggleComponentLoad(6)" class="btn btn-xs">
+                        {{isComponentLoaded(6) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn6); when isComponentLoaded(6)) {
+                      <app0-lib0-sub-child-276 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-276</p>
+                        <button #loadBtn6 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-276...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-276</p>
+                        <button (click)="retryLoadComponent(6)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="7 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">8</span>
+                      <span class="item-selector">app0-lib0-sub-child-277</span>
+                      <button (click)="toggleComponentLoad(7)" class="btn btn-xs">
+                        {{isComponentLoaded(7) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn7); when isComponentLoaded(7)) {
+                      <app0-lib0-sub-child-277 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-277</p>
+                        <button #loadBtn7 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-277...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-277</p>
+                        <button (click)="retryLoadComponent(7)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="8 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">9</span>
+                      <span class="item-selector">app0-lib0-sub-child-278</span>
+                      <button (click)="toggleComponentLoad(8)" class="btn btn-xs">
+                        {{isComponentLoaded(8) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn8); when isComponentLoaded(8)) {
+                      <app0-lib0-sub-child-278 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-278</p>
+                        <button #loadBtn8 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-278...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-278</p>
+                        <button (click)="retryLoadComponent(8)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="9 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">10</span>
+                      <span class="item-selector">app0-lib0-sub-child-279</span>
+                      <button (click)="toggleComponentLoad(9)" class="btn btn-xs">
+                        {{isComponentLoaded(9) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn9); when isComponentLoaded(9)) {
+                      <app0-lib0-sub-child-279 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-279</p>
+                        <button #loadBtn9 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-279...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-279</p>
+                        <button (click)="retryLoadComponent(9)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="10 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">11</span>
+                      <span class="item-selector">app0-lib0-sub-child-280</span>
+                      <button (click)="toggleComponentLoad(10)" class="btn btn-xs">
+                        {{isComponentLoaded(10) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn10); when isComponentLoaded(10)) {
+                      <app0-lib0-sub-child-280 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-280</p>
+                        <button #loadBtn10 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-280...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-280</p>
+                        <button (click)="retryLoadComponent(10)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="11 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">12</span>
+                      <span class="item-selector">app0-lib0-sub-child-281</span>
+                      <button (click)="toggleComponentLoad(11)" class="btn btn-xs">
+                        {{isComponentLoaded(11) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn11); when isComponentLoaded(11)) {
+                      <app0-lib0-sub-child-281 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-281</p>
+                        <button #loadBtn11 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-281...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-281</p>
+                        <button (click)="retryLoadComponent(11)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="12 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">13</span>
+                      <span class="item-selector">app0-lib0-sub-child-282</span>
+                      <button (click)="toggleComponentLoad(12)" class="btn btn-xs">
+                        {{isComponentLoaded(12) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn12); when isComponentLoaded(12)) {
+                      <app0-lib0-sub-child-282 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-282</p>
+                        <button #loadBtn12 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-282...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-282</p>
+                        <button (click)="retryLoadComponent(12)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="13 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">14</span>
+                      <span class="item-selector">app0-lib0-sub-child-283</span>
+                      <button (click)="toggleComponentLoad(13)" class="btn btn-xs">
+                        {{isComponentLoaded(13) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn13); when isComponentLoaded(13)) {
+                      <app0-lib0-sub-child-283 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-283</p>
+                        <button #loadBtn13 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-283...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-283</p>
+                        <button (click)="retryLoadComponent(13)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="14 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">15</span>
+                      <span class="item-selector">app0-lib0-sub-child-284</span>
+                      <button (click)="toggleComponentLoad(14)" class="btn btn-xs">
+                        {{isComponentLoaded(14) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn14); when isComponentLoaded(14)) {
+                      <app0-lib0-sub-child-284 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-284</p>
+                        <button #loadBtn14 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-284...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-284</p>
+                        <button (click)="retryLoadComponent(14)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="15 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">16</span>
+                      <span class="item-selector">app0-lib0-sub-child-285</span>
+                      <button (click)="toggleComponentLoad(15)" class="btn btn-xs">
+                        {{isComponentLoaded(15) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn15); when isComponentLoaded(15)) {
+                      <app0-lib0-sub-child-285 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-285</p>
+                        <button #loadBtn15 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-285...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-285</p>
+                        <button (click)="retryLoadComponent(15)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="16 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">17</span>
+                      <span class="item-selector">app0-lib0-sub-child-286</span>
+                      <button (click)="toggleComponentLoad(16)" class="btn btn-xs">
+                        {{isComponentLoaded(16) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn16); when isComponentLoaded(16)) {
+                      <app0-lib0-sub-child-286 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-286</p>
+                        <button #loadBtn16 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-286...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-286</p>
+                        <button (click)="retryLoadComponent(16)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="17 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">18</span>
+                      <span class="item-selector">app0-lib0-sub-child-287</span>
+                      <button (click)="toggleComponentLoad(17)" class="btn btn-xs">
+                        {{isComponentLoaded(17) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn17); when isComponentLoaded(17)) {
+                      <app0-lib0-sub-child-287 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-287</p>
+                        <button #loadBtn17 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-287...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-287</p>
+                        <button (click)="retryLoadComponent(17)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="18 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">19</span>
+                      <span class="item-selector">app0-lib0-sub-child-288</span>
+                      <button (click)="toggleComponentLoad(18)" class="btn btn-xs">
+                        {{isComponentLoaded(18) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn18); when isComponentLoaded(18)) {
+                      <app0-lib0-sub-child-288 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-288</p>
+                        <button #loadBtn18 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-288...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-288</p>
+                        <button (click)="retryLoadComponent(18)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="19 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">20</span>
+                      <span class="item-selector">app0-lib0-sub-child-289</span>
+                      <button (click)="toggleComponentLoad(19)" class="btn btn-xs">
+                        {{isComponentLoaded(19) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn19); when isComponentLoaded(19)) {
+                      <app0-lib0-sub-child-289 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-289</p>
+                        <button #loadBtn19 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-289...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-289</p>
+                        <button (click)="retryLoadComponent(19)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="20 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">21</span>
+                      <span class="item-selector">app0-lib0-sub-child-290</span>
+                      <button (click)="toggleComponentLoad(20)" class="btn btn-xs">
+                        {{isComponentLoaded(20) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn20); when isComponentLoaded(20)) {
+                      <app0-lib0-sub-child-290 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-290</p>
+                        <button #loadBtn20 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-290...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-290</p>
+                        <button (click)="retryLoadComponent(20)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="21 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">22</span>
+                      <span class="item-selector">app0-lib0-sub-child-291</span>
+                      <button (click)="toggleComponentLoad(21)" class="btn btn-xs">
+                        {{isComponentLoaded(21) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn21); when isComponentLoaded(21)) {
+                      <app0-lib0-sub-child-291 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-291</p>
+                        <button #loadBtn21 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-291...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-291</p>
+                        <button (click)="retryLoadComponent(21)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="22 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">23</span>
+                      <span class="item-selector">app0-lib0-sub-child-292</span>
+                      <button (click)="toggleComponentLoad(22)" class="btn btn-xs">
+                        {{isComponentLoaded(22) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn22); when isComponentLoaded(22)) {
+                      <app0-lib0-sub-child-292 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-292</p>
+                        <button #loadBtn22 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-292...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-292</p>
+                        <button (click)="retryLoadComponent(22)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="23 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">24</span>
+                      <span class="item-selector">app0-lib0-sub-child-293</span>
+                      <button (click)="toggleComponentLoad(23)" class="btn btn-xs">
+                        {{isComponentLoaded(23) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn23); when isComponentLoaded(23)) {
+                      <app0-lib0-sub-child-293 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-293</p>
+                        <button #loadBtn23 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-293...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-293</p>
+                        <button (click)="retryLoadComponent(23)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="24 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">25</span>
+                      <span class="item-selector">app0-lib0-sub-child-294</span>
+                      <button (click)="toggleComponentLoad(24)" class="btn btn-xs">
+                        {{isComponentLoaded(24) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn24); when isComponentLoaded(24)) {
+                      <app0-lib0-sub-child-294 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-294</p>
+                        <button #loadBtn24 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-294...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-294</p>
+                        <button (click)="retryLoadComponent(24)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="25 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">26</span>
+                      <span class="item-selector">app0-lib0-sub-child-295</span>
+                      <button (click)="toggleComponentLoad(25)" class="btn btn-xs">
+                        {{isComponentLoaded(25) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn25); when isComponentLoaded(25)) {
+                      <app0-lib0-sub-child-295 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-295</p>
+                        <button #loadBtn25 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-295...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-295</p>
+                        <button (click)="retryLoadComponent(25)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="26 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">27</span>
+                      <span class="item-selector">app0-lib0-sub-child-296</span>
+                      <button (click)="toggleComponentLoad(26)" class="btn btn-xs">
+                        {{isComponentLoaded(26) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn26); when isComponentLoaded(26)) {
+                      <app0-lib0-sub-child-296 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-296</p>
+                        <button #loadBtn26 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-296...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-296</p>
+                        <button (click)="retryLoadComponent(26)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="27 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">28</span>
+                      <span class="item-selector">app0-lib0-sub-child-297</span>
+                      <button (click)="toggleComponentLoad(27)" class="btn btn-xs">
+                        {{isComponentLoaded(27) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn27); when isComponentLoaded(27)) {
+                      <app0-lib0-sub-child-297 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-297</p>
+                        <button #loadBtn27 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-297...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-297</p>
+                        <button (click)="retryLoadComponent(27)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="28 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">29</span>
+                      <span class="item-selector">app0-lib0-sub-child-298</span>
+                      <button (click)="toggleComponentLoad(28)" class="btn btn-xs">
+                        {{isComponentLoaded(28) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn28); when isComponentLoaded(28)) {
+                      <app0-lib0-sub-child-298 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-298</p>
+                        <button #loadBtn28 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-298...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-298</p>
+                        <button (click)="retryLoadComponent(28)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                  <div class="list-item" [class]="29 % 2 === 0 ? 'even' : 'odd'">
+                    <div class="item-header">
+                      <span class="item-index">30</span>
+                      <span class="item-selector">app0-lib0-sub-child-299</span>
+                      <button (click)="toggleComponentLoad(29)" class="btn btn-xs">
+                        {{isComponentLoaded(29) ? 'Unload' : 'Load'}}
+                      </button>
+                    </div>
+                    @defer (on interaction(loadBtn29); when isComponentLoaded(29)) {
+                      <app0-lib0-sub-child-299 />
+                    } @placeholder {
+                      <div class="placeholder">
+                        <p>Click to load app0-lib0-sub-child-299</p>
+                        <button #loadBtn29 class="btn btn-primary">Load Component</button>
+                      </div>
+                    } @loading (minimum 500ms) {
+                      <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>Loading app0-lib0-sub-child-299...</p>
+                      </div>
+                    } @error {
+                      <div class="error-placeholder">
+                        <p>Error loading app0-lib0-sub-child-299</p>
+                        <button (click)="retryLoadComponent(29)" class="btn btn-warning">Retry</button>
+                      </div>
+                    }
+                  </div>
+                </div>
+              }
+            }
+            @default {
+              <div class="unknown-state">
+                <p>Unknown status: {{status}}</p>
+              </div>
+            }
+          }
+        </div>
+      } @else {
+        <div class="collapsed-summary">
+          <p>{{subChildren.length}} sub-components hidden</p>
+          <button (click)="expand()" class="btn btn-link">Click to expand</button>
+        </div>
+      }
+      
+      <div class="child-footer">
+        <small>Generated at: {{generatedAt}} | Mode: {{mode}} | Progress: {{progress}}%</small>
+      </div>
     </div>`,
   imports: [
-    App0Lib0SubChild900,
-    App0Lib0SubChild901,
-    App0Lib0SubChild902,
-    App0Lib0SubChild903,
-    App0Lib0SubChild904,
-    App0Lib0SubChild905,
-    App0Lib0SubChild906,
-    App0Lib0SubChild907,
-    App0Lib0SubChild908,
-    App0Lib0SubChild909,
-    App0Lib0SubChild910,
-    App0Lib0SubChild911,
-    App0Lib0SubChild912,
-    App0Lib0SubChild913,
-    App0Lib0SubChild914,
-    App0Lib0SubChild915,
-    App0Lib0SubChild916,
-    App0Lib0SubChild917,
-    App0Lib0SubChild918,
-    App0Lib0SubChild919,
-    App0Lib0SubChild920,
-    App0Lib0SubChild921,
-    App0Lib0SubChild922,
-    App0Lib0SubChild923,
-    App0Lib0SubChild924,
-    App0Lib0SubChild925,
-    App0Lib0SubChild926,
-    App0Lib0SubChild927,
-    App0Lib0SubChild928,
-    App0Lib0SubChild929,
-    App0Lib0SubChild930,
-    App0Lib0SubChild931,
-    App0Lib0SubChild932,
-    App0Lib0SubChild933,
-    App0Lib0SubChild934,
-    App0Lib0SubChild935,
-    App0Lib0SubChild936,
-    App0Lib0SubChild937,
-    App0Lib0SubChild938,
-    App0Lib0SubChild939,
-    App0Lib0SubChild940,
-    App0Lib0SubChild941,
-    App0Lib0SubChild942,
-    App0Lib0SubChild943,
-    App0Lib0SubChild944,
-    App0Lib0SubChild945,
-    App0Lib0SubChild946,
-    App0Lib0SubChild947,
-    App0Lib0SubChild948,
-    App0Lib0SubChild949,
-    App0Lib0SubChild950,
-    App0Lib0SubChild951,
-    App0Lib0SubChild952,
-    App0Lib0SubChild953,
-    App0Lib0SubChild954,
-    App0Lib0SubChild955,
-    App0Lib0SubChild956,
-    App0Lib0SubChild957,
-    App0Lib0SubChild958,
-    App0Lib0SubChild959,
-    App0Lib0SubChild960,
-    App0Lib0SubChild961,
-    App0Lib0SubChild962,
-    App0Lib0SubChild963,
-    App0Lib0SubChild964,
-    App0Lib0SubChild965,
-    App0Lib0SubChild966,
-    App0Lib0SubChild967,
-    App0Lib0SubChild968,
-    App0Lib0SubChild969,
-    App0Lib0SubChild970,
-    App0Lib0SubChild971,
-    App0Lib0SubChild972,
-    App0Lib0SubChild973,
-    App0Lib0SubChild974,
-    App0Lib0SubChild975,
-    App0Lib0SubChild976,
-    App0Lib0SubChild977,
-    App0Lib0SubChild978,
-    App0Lib0SubChild979,
-    App0Lib0SubChild980,
-    App0Lib0SubChild981,
-    App0Lib0SubChild982,
-    App0Lib0SubChild983,
-    App0Lib0SubChild984,
-    App0Lib0SubChild985,
-    App0Lib0SubChild986,
-    App0Lib0SubChild987,
-    App0Lib0SubChild988,
-    App0Lib0SubChild989,
-    App0Lib0SubChild990,
-    App0Lib0SubChild991,
-    App0Lib0SubChild992,
-    App0Lib0SubChild993,
-    App0Lib0SubChild994,
-    App0Lib0SubChild995,
-    App0Lib0SubChild996,
-    App0Lib0SubChild997,
-    App0Lib0SubChild998,
-    App0Lib0SubChild999,
+    App0Lib0SubChild270,
+    App0Lib0SubChild271,
+    App0Lib0SubChild272,
+    App0Lib0SubChild273,
+    App0Lib0SubChild274,
+    App0Lib0SubChild275,
+    App0Lib0SubChild276,
+    App0Lib0SubChild277,
+    App0Lib0SubChild278,
+    App0Lib0SubChild279,
+    App0Lib0SubChild280,
+    App0Lib0SubChild281,
+    App0Lib0SubChild282,
+    App0Lib0SubChild283,
+    App0Lib0SubChild284,
+    App0Lib0SubChild285,
+    App0Lib0SubChild286,
+    App0Lib0SubChild287,
+    App0Lib0SubChild288,
+    App0Lib0SubChild289,
+    App0Lib0SubChild290,
+    App0Lib0SubChild291,
+    App0Lib0SubChild292,
+    App0Lib0SubChild293,
+    App0Lib0SubChild294,
+    App0Lib0SubChild295,
+    App0Lib0SubChild296,
+    App0Lib0SubChild297,
+    App0Lib0SubChild298,
+    App0Lib0SubChild299,
   ],
 })
-export class App0Lib0Child9 {}
+export class App0Lib0Child9 {
+  title = 'App0Lib0Child9';
+  isExpanded = true;
+  mode: 'grid' | 'list' = 'grid';
+  status: 'loading' | 'loaded' | 'error' = 'loaded';
+  progress = 49;
+  generatedAt = new Date().toLocaleTimeString();
+  
+  subChildren = [
+    { selector: 'app0-lib0-sub-child-270', name: 'App0Lib0SubChild270' },
+    { selector: 'app0-lib0-sub-child-271', name: 'App0Lib0SubChild271' },
+    { selector: 'app0-lib0-sub-child-272', name: 'App0Lib0SubChild272' },
+    { selector: 'app0-lib0-sub-child-273', name: 'App0Lib0SubChild273' },
+    { selector: 'app0-lib0-sub-child-274', name: 'App0Lib0SubChild274' },
+    { selector: 'app0-lib0-sub-child-275', name: 'App0Lib0SubChild275' },
+    { selector: 'app0-lib0-sub-child-276', name: 'App0Lib0SubChild276' },
+    { selector: 'app0-lib0-sub-child-277', name: 'App0Lib0SubChild277' },
+    { selector: 'app0-lib0-sub-child-278', name: 'App0Lib0SubChild278' },
+    { selector: 'app0-lib0-sub-child-279', name: 'App0Lib0SubChild279' },
+    { selector: 'app0-lib0-sub-child-280', name: 'App0Lib0SubChild280' },
+    { selector: 'app0-lib0-sub-child-281', name: 'App0Lib0SubChild281' },
+    { selector: 'app0-lib0-sub-child-282', name: 'App0Lib0SubChild282' },
+    { selector: 'app0-lib0-sub-child-283', name: 'App0Lib0SubChild283' },
+    { selector: 'app0-lib0-sub-child-284', name: 'App0Lib0SubChild284' },
+    { selector: 'app0-lib0-sub-child-285', name: 'App0Lib0SubChild285' },
+    { selector: 'app0-lib0-sub-child-286', name: 'App0Lib0SubChild286' },
+    { selector: 'app0-lib0-sub-child-287', name: 'App0Lib0SubChild287' },
+    { selector: 'app0-lib0-sub-child-288', name: 'App0Lib0SubChild288' },
+    { selector: 'app0-lib0-sub-child-289', name: 'App0Lib0SubChild289' },
+    { selector: 'app0-lib0-sub-child-290', name: 'App0Lib0SubChild290' },
+    { selector: 'app0-lib0-sub-child-291', name: 'App0Lib0SubChild291' },
+    { selector: 'app0-lib0-sub-child-292', name: 'App0Lib0SubChild292' },
+    { selector: 'app0-lib0-sub-child-293', name: 'App0Lib0SubChild293' },
+    { selector: 'app0-lib0-sub-child-294', name: 'App0Lib0SubChild294' },
+    { selector: 'app0-lib0-sub-child-295', name: 'App0Lib0SubChild295' },
+    { selector: 'app0-lib0-sub-child-296', name: 'App0Lib0SubChild296' },
+    { selector: 'app0-lib0-sub-child-297', name: 'App0Lib0SubChild297' },
+    { selector: 'app0-lib0-sub-child-298', name: 'App0Lib0SubChild298' },
+    { selector: 'app0-lib0-sub-child-299', name: 'App0Lib0SubChild299' }
+  ];
+  
+  // Defer loading state management
+  loadedComponents = new Set<number>();
+  loadingComponents = new Set<number>();
+  errorComponents = new Set<number>();
+  
+  expand() {
+    this.isExpanded = true;
+  }
+  
+  collapse() {
+    this.isExpanded = false;
+  }
+  
+  toggleMode() {
+    this.mode = this.mode === 'grid' ? 'list' : 'grid';
+  }
+  
+  retry() {
+    this.status = 'loading';
+    setTimeout(() => {
+      this.status = 'loaded';
+    }, 1000);
+  }
+  
+  shouldLoadComponent(index: number): boolean {
+    // Load components in batches or based on viewport
+    return index < 10 || this.loadedComponents.has(index);
+  }
+  
+  isComponentLoaded(index: number): boolean {
+    return this.loadedComponents.has(index);
+  }
+  
+  toggleComponentLoad(index: number) {
+    if (this.loadedComponents.has(index)) {
+      this.loadedComponents.delete(index);
+    } else {
+      this.loadedComponents.add(index);
+    }
+  }
+  
+  retryLoadComponent(index: number) {
+    this.errorComponents.delete(index);
+    this.loadingComponents.add(index);
+    
+    // Simulate loading delay
+    setTimeout(() => {
+      this.loadingComponents.delete(index);
+      if (Math.random() > 0.1) { // 90% success rate
+        this.loadedComponents.add(index);
+      } else {
+        this.errorComponents.add(index);
+      }
+    }, Math.random() * 2000 + 500);
+  }
+}

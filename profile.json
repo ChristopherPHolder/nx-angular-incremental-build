@@ -2,7 +2,7 @@
   {
     "name": "thread_name",
     "ph": "M",
-    "pid": 41994,
+    "pid": 77833,
     "tid": 0,
     "ts": 0,
     "args": {
@@ -13,9 +13,9 @@
     "name": "app0:build:production",
     "cat": "app0,build,production",
     "ph": "X",
-    "ts": 1757096003844000,
-    "dur": 35401000,
-    "pid": 41994,
+    "ts": 1757099789460000,
+    "dur": 75045000,
+    "pid": 77833,
     "tid": 0,
     "args": {
       "target": {

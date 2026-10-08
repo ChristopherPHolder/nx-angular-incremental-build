@@ -282,7 +282,9 @@ async function main() {
 function report(dir) {
   const files = readdirSync(dir, { recursive: true })
     .filter((file) => String(file).endsWith('results.json'))
-    .map((file) => JSON.parse(readFileSync(join(dir, String(file)), 'utf8')));
+    .map((file) => JSON.parse(readFileSync(join(dir, String(file)), 'utf8')))
+    // Skip results of other tools (e.g. the experiments) that share the file name
+    .filter((file) => Array.isArray(file.runs) && file.demos);
   if (!files.length) throw new Error(`No results.json found below ${dir}`);
   const merged = {
     ...files[0],

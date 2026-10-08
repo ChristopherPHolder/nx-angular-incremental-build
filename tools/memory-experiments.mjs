@@ -5,6 +5,8 @@
  * compared with incremental builds, whether Angular's own knobs bring it down, and where builds run
  * out of memory.
  *
+ *   0. default-heap: build app0 from source and incrementally with Node's default heap limit (no
+ *                --max-old-space-size)
  *   1. threads:  build app1 from source with the default settings, NG_BUILD_PARALLEL_TS=0 (TypeScript
  *                on the main thread instead of a worker) and NG_BUILD_MAX_WORKERS=1 (one worker thread)
  *   2. heap:     build app1 from source, and incrementally against pre-built libs, under shrinking
@@ -15,7 +17,7 @@
  * Every build skips the Nx cache. Peak memory is the peak RSS of the whole Nx process tree.
  * Results go to tmp/memory/results.json and tmp/memory/summary.md.
  *
- * Usage: node tools/memory-experiments.mjs [--experiments=threads,heap,parallel]
+ * Usage: node tools/memory-experiments.mjs [--experiments=default-heap,threads,heap,parallel]
  */
 
 import { spawn, execFileSync } from 'node:child_process';
@@ -103,6 +105,16 @@ async function measure(label, args, env) {
 }
 
 const EXPERIMENTS = {
+  async 'default-heap'() {
+    // An empty NODE_OPTIONS leaves Node at its default heap limit (about 4 GB on 64-bit machines)
+    const env = { NODE_OPTIONS: '' };
+    return [
+      await measure('app0 from source, default heap', ['build', 'app0', '--excludeTaskDependencies'], env),
+      await measure('app0 incremental (@angular/build:library), default heap', ['build', 'app0', '--buildLibsFromSource=false'], env),
+      await measure('app0 incremental (ng-packagr), default heap', ['build-ng-packagr', 'app0'], env),
+    ];
+  },
+
   async threads() {
     const build = ['build', 'app1', '--excludeTaskDependencies'];
     return [

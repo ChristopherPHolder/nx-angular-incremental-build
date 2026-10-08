@@ -115,12 +115,13 @@ jobs:
     if: inputs.experiments
     name: experiment · ${{ matrix.experiment }}
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
-        # Separate jobs, so a runner that runs out of memory only loses that experiment
-        experiment: [memory-default-heap, memory-threads, memory-heap, memory-parallel, factors]
+        # Separate jobs, so a runner that runs out of memory only loses that experiment.
+        # memory-parallel-limit builds six apps from source three at a time, which needs more than 16 GB.
+        experiment: [memory-default-heap, memory-threads, memory-heap, memory-parallel, memory-parallel-limit, factors]
     steps:
       - uses: actions/checkout@v4
 

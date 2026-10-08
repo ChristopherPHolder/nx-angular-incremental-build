@@ -304,7 +304,7 @@ The memory experiments also ran on CI as one job on a 16 GB runner ([run 3780348
 
 The runner died before it could upload anything, and the script only wrote its results at the end, so nothing was recorded. Going by the timing, it died in the last experiment: building the 6 apps from source with 3 tasks at once, which needs roughly 15–17 GB on a 16 GB machine. The benchmark jobs build from source with 2 tasks at once; they peaked at 14.4–14.5 GB and survived.
 
-This is the practical version of the out-of-memory problem: building many apps from source in parallel doesn't fit on a standard GitHub-hosted runner, while the incremental builds of the same apps peak at about 8 GB. The workflow now runs each memory experiment as its own job, and the script saves its results after every build, so a runner that dies only loses the experiment it was running.
+This is the practical version of the out-of-memory problem: building many apps from source in parallel doesn't fit on a standard GitHub-hosted runner, while the incremental builds of the same apps peak at about 8 GB. The workflow now runs each memory experiment as its own job with a 30-minute limit, and the script saves its results after every build. The risky build (six apps from source, three at a time) is its own `memory-parallel-limit` job, so a runner that dies only loses that one result. To stay within the time limit, CI tests three heap limits (4096, 3072 and 1536 MB) and skips the slow `--parallel=1` run measured locally.
 
 ## What makes the new builder faster
 

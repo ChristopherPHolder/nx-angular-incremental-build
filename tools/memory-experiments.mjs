@@ -11,13 +11,15 @@
  *                on the main thread instead of a worker) and NG_BUILD_MAX_WORKERS=1 (one worker thread)
  *   2. heap:     build app1 from source, and incrementally against pre-built libs, under shrinking
  *                --max-old-space-size limits, and record which ones run out of memory
- *   3. parallel: build every app of the demo from source with --parallel=1, 2 and 3, and
- *                incrementally with @angular/build:library with --parallel=3
+ *   3. parallel: build every app of the demo from source with --parallel=2, and incrementally with
+ *                @angular/build:library with --parallel=3
+ *   4. parallel-limit: build every app of the demo from source with --parallel=3. On a 16 GB machine this
+ *                runs out of memory, so it is its own experiment (and CI job)
  *
  * Every build skips the Nx cache. Peak memory is the peak RSS of the whole Nx process tree.
  * Results go to tmp/memory/results.json and tmp/memory/summary.md.
  *
- * Usage: node tools/memory-experiments.mjs [--experiments=default-heap,threads,heap,parallel]
+ * Usage: node tools/memory-experiments.mjs [--experiments=default-heap,threads,heap,parallel,parallel-limit]
  */
 
 import { spawn, execFileSync } from 'node:child_process';
@@ -144,7 +146,7 @@ const EXPERIMENTS = {
     // The incremental app build needs its libs in dist
     await runNx(['run-many', '-t', 'build', '-p', 'shared-ui*,app1-lib*']);
     const results = [];
-    for (const heap of [4096, 3072, 2048, 1536]) {
+    for (const heap of [4096, 3072, 1536]) {
       const env = { NODE_OPTIONS: `--max-old-space-size=${heap}` };
       results.push(
         await measure(`From source, ${heap} MB heap`, ['build', 'app1', '--excludeTaskDependencies', '--buildLibsFromSource=true'], env),
@@ -158,16 +160,17 @@ const EXPERIMENTS = {
 
   async parallel() {
     const apps = nxProjects('tag:demo:entry-points', 'app').join(',');
-    const results = [];
-    for (const parallel of [1, 2, 3]) {
-      results.push(
-        await measure(`All apps from source, --parallel=${parallel}`, ['run-many', '-t', 'build', '-p', apps, '--excludeTaskDependencies', '--buildLibsFromSource=true', `--parallel=${parallel}`])
-      );
-    }
-    results.push(
-      await measure('All apps incremental (@angular/build:library), --parallel=3', ['run-many', '-t', 'build', '-p', apps, '--buildLibsFromSource=false', '--parallel=3'])
-    );
-    return results;
+    return [
+      await measure('All apps from source, --parallel=2', ['run-many', '-t', 'build', '-p', apps, '--excludeTaskDependencies', '--buildLibsFromSource=true', '--parallel=2']),
+      await measure('All apps incremental (@angular/build:library), --parallel=3', ['run-many', '-t', 'build', '-p', apps, '--buildLibsFromSource=false', '--parallel=3']),
+    ];
+  },
+
+  async 'parallel-limit'() {
+    const apps = nxProjects('tag:demo:entry-points', 'app').join(',');
+    return [
+      await measure('All apps from source, --parallel=3', ['run-many', '-t', 'build', '-p', apps, '--excludeTaskDependencies', '--buildLibsFromSource=true', '--parallel=3']),
+    ];
   },
 };
 

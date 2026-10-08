@@ -22,6 +22,7 @@
  * (also appended to the GitHub job summary when running in Actions).
  *
  * Usage: node tools/benchmark.mjs [--iterations=3] [--demos=app0,entry-points] [--modes=source,ng-packagr,library] [--parallel=3]
+ *        node tools/benchmark.mjs --report=<dir>   merges every results.json below <dir> (e.g. one per CI job) into one summary
  */
 
 import { spawn, execFileSync } from 'node:child_process';
@@ -205,6 +206,8 @@ function readTasks(profilePath) {
 }
 
 async function main() {
+  const reportDir = process.argv.find((arg) => arg.startsWith('--report='))?.split('=')[1];
+  if (reportDir) return report(reportDir);
   mkdirSync(PROFILES_DIR, { recursive: true });
   const runs = [];
 
@@ -270,7 +273,28 @@ async function main() {
   console.log(`\n${summary}`);
 }
 
-function renderSummary({ commit, node, iterations, demos, runs, nodeOptions, ci, parallel }) {
+/** Merges the results of several runs (e.g. one CI job per demo and mode) into one summary. */
+function report(dir) {
+  const files = readdirSync(dir, { recursive: true })
+    .filter((file) => String(file).endsWith('results.json'))
+    .map((file) => JSON.parse(readFileSync(join(dir, String(file)), 'utf8')));
+  if (!files.length) throw new Error(`No results.json found below ${dir}`);
+  const merged = {
+    ...files[0],
+    iterations: Math.max(...files.map((file) => file.iterations)),
+    demos: Object.assign({}, ...files.map((file) => file.demos)),
+    runs: files.flatMap((file) => file.runs),
+    jobs: files.length,
+  };
+  mkdirSync(OUT_DIR, { recursive: true });
+  writeFileSync(join(OUT_DIR, 'results.json'), JSON.stringify(merged, null, 2));
+  const summary = renderSummary(merged);
+  writeFileSync(join(OUT_DIR, 'summary.md'), summary);
+  if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary);
+  console.log(summary);
+}
+
+function renderSummary({ commit, node, iterations, demos, runs, nodeOptions, ci, parallel, jobs }) {
   const lines = [
     '## Build benchmark: from source vs incremental (ng-packagr vs @angular/build:library)',
     '',
@@ -278,6 +302,7 @@ function renderSummary({ commit, node, iterations, demos, runs, nodeOptions, ci,
     '',
     ...Object.entries(MODES).map(([, mode]) => `- **${mode.label}**: ${mode.description}`),
     '',
+    ...(jobs > 1 ? [`Merged from ${jobs} jobs. Each demo and mode ran on its own machine, so comparisons between modes include runner-to-runner variance.`, ''] : []),
     'Time and memory are the median across iterations (min–max in brackets). Memory is the peak RSS of the whole Nx process tree. "Lib tasks" and "App tasks" are the summed durations of the lib and app build tasks that actually ran.',
   ];
 

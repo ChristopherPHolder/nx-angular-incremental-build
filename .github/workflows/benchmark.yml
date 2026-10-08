@@ -7,28 +7,62 @@ on:
         description: 'Number of times to repeat each scenario'
         type: number
         required: true
-        default: 3
+        default: 1
       demos:
         description: 'Comma-separated demos to benchmark (app0, entry-points)'
         type: string
         required: true
         default: 'app0,entry-points'
+      modes:
+        description: 'Comma-separated modes to benchmark (source, ng-packagr, library)'
+        type: string
+        required: true
+        default: 'source,ng-packagr,library'
       parallel:
         description: 'Nx tasks to run at once. Building 3 entry-points apps from source at once needs ~17 GB, more than the 16 GB runner has'
         type: number
         required: true
         default: 2
+      experiments:
+        description: 'Also run the memory and builder-factor experiments'
+        type: boolean
+        required: true
+        default: true
 
 permissions:
   contents: read
 
+env:
+  # Building an app from source compiles every lib and exceeds Node's default heap
+  NODE_OPTIONS: --max-old-space-size=8192
+
 jobs:
-  benchmark:
+  matrix:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
-    env:
-      # The app build compiles the generated libs from source and exceeds Node's default heap
-      NODE_OPTIONS: --max-old-space-size=8192
+    outputs:
+      include: ${{ steps.matrix.outputs.include }}
+    steps:
+      - id: matrix
+        run: |
+          node -e '
+            const split = (value) => value.split(",").map((item) => item.trim()).filter(Boolean);
+            const include = split(process.env.DEMOS).flatMap((demo) => split(process.env.MODES).map((mode) => ({ demo, mode })));
+            require("fs").appendFileSync(process.env.GITHUB_OUTPUT, `include=${JSON.stringify(include)}\n`);
+          '
+        env:
+          DEMOS: ${{ inputs.demos }}
+          MODES: ${{ inputs.modes }}
+
+  # One job per demo and mode, so the slow combinations run in parallel on separate runners
+  benchmark:
+    needs: matrix
+    name: ${{ matrix.demo }} · ${{ matrix.mode }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.matrix.outputs.include) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -39,15 +73,73 @@ jobs:
 
       - run: npm ci --legacy-peer-deps
 
-      - run: node tools/benchmark.mjs --iterations="$ITERATIONS" --demos="$DEMOS" --parallel="$PARALLEL"
+      - run: node tools/benchmark.mjs --iterations="$ITERATIONS" --demos="$DEMO" --modes="$MODE" --parallel="$PARALLEL"
         env:
           ITERATIONS: ${{ inputs.iterations }}
-          DEMOS: ${{ inputs.demos }}
+          DEMO: ${{ matrix.demo }}
+          MODE: ${{ matrix.mode }}
           PARALLEL: ${{ inputs.parallel }}
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: benchmark-results
+          name: benchmark-${{ matrix.demo }}-${{ matrix.mode }}
           path: tmp/benchmark
+          if-no-files-found: ignore
+
+  report:
+    needs: benchmark
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: benchmark-*
+          path: results
+
+      - run: node tools/benchmark.mjs --report=results
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-report
+          path: tmp/benchmark
+
+  experiments:
+    if: inputs.experiments
+    name: experiment · ${{ matrix.experiment }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        experiment: [memory, factors]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - run: npm ci --legacy-peer-deps
+
+      - if: matrix.experiment == 'memory'
+        run: node tools/memory-experiments.mjs
+
+      - if: matrix.experiment == 'factors'
+        run: node tools/builder-factors.mjs
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: experiment-${{ matrix.experiment }}
+          path: |
+            tmp/memory
+            tmp/factors
           if-no-files-found: ignore

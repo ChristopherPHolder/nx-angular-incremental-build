@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 
 // EXTREMELY COMPLEX TYPESCRIPT INTERFACES - These will dramatically slow down compilation
@@ -177,6 +177,7 @@ type ComplexUtilityType<T> = {
 
 @Component({
   selector: 'app0-lib4-sub-child-58',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div class="sub-child">
       <h4>{{title}}</h4>

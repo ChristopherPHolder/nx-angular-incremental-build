@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { App0Lib2SubChild60 } from './sub-children/sub-child-60.component';
 import { App0Lib2SubChild61 } from './sub-children/sub-child-61.component';
 import { App0Lib2SubChild62 } from './sub-children/sub-child-62.component';
@@ -1357,6 +1357,7 @@ import { App0Lib2SubChild89 } from './sub-children/sub-child-89.component';
         <small>Generated at: {{generatedAt}} | Mode: {{mode}} | Progress: {{progress}}%</small>
       </div>
     </div>`,
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     App0Lib2SubChild60,
     App0Lib2SubChild61,

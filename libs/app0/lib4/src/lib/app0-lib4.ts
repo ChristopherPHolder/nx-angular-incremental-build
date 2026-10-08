@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { App0Lib4Child0 } from './child-0/child-0.component';
 import { App0Lib4Child1 } from './child-1/child-1.component';
@@ -519,6 +519,7 @@ import { App0Lib4Child9 } from './child-9/child-9.component';
       </footer>
     </div>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     FormsModule,
     App0Lib4Child0,

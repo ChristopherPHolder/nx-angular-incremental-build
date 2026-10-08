@@ -20,6 +20,11 @@
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     },
+    "@nx/angular:application": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
     "@nx/eslint:lint": {
       "cache": true,
       "inputs": [

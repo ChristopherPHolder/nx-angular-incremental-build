@@ -118,7 +118,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        experiment: [memory, factors]
+        # Separate jobs, so a runner that runs out of memory only loses that experiment
+        experiment: [memory-default-heap, memory-threads, memory-heap, memory-parallel, factors]
     steps:
       - uses: actions/checkout@v4
 
@@ -129,8 +130,10 @@ jobs:
 
       - run: npm ci --legacy-peer-deps
 
-      - if: matrix.experiment == 'memory'
-        run: node tools/memory-experiments.mjs
+      - if: startsWith(matrix.experiment, 'memory-')
+        run: node tools/memory-experiments.mjs --experiments="${EXPERIMENT#memory-}"
+        env:
+          EXPERIMENT: ${{ matrix.experiment }}
 
       - if: matrix.experiment == 'factors'
         run: node tools/builder-factors.mjs

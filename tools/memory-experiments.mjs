@@ -97,11 +97,26 @@ function runNx(args, env = {}) {
   });
 }
 
+// Results are saved after every build, so a runner that dies part-way (e.g. out of memory) keeps what it measured
+const results = {};
+let currentExperiment;
+
+function save() {
+  writeFileSync(
+    join(OUT_DIR, 'results.json'),
+    JSON.stringify({ date: new Date().toISOString(), node: process.version, ci: process.env.CI ?? null, results }, null, 2)
+  );
+  writeFileSync(join(OUT_DIR, 'summary.md'), renderSummary(results));
+}
+
 async function measure(label, args, env) {
   console.log(`\n=== ${label} ===\n`);
   const result = await runNx(args, env);
   console.log(`\n→ ${result.ok ? 'ok' : result.outOfMemory ? 'OUT OF MEMORY' : 'FAILED'}, ${(result.durationMs / 1000).toFixed(1)}s, peak ${formatBytes(result.peakRss)}`);
-  return { label, args: args.join(' '), env, ...result };
+  const entry = { label, args: args.join(' '), env, ...result };
+  (results[currentExperiment] ??= []).push(entry);
+  save();
+  return entry;
 }
 
 const EXPERIMENTS = {
@@ -158,17 +173,13 @@ const EXPERIMENTS = {
 
 async function main() {
   mkdirSync(OUT_DIR, { recursive: true });
-  const results = {};
   for (const [name, run] of Object.entries(EXPERIMENTS)) {
     if (selected && !selected.includes(name)) continue;
-    results[name] = await run();
+    currentExperiment = name;
+    await run();
   }
-  writeFileSync(
-    join(OUT_DIR, 'results.json'),
-    JSON.stringify({ date: new Date().toISOString(), node: process.version, ci: process.env.CI ?? null, results }, null, 2)
-  );
+  save();
   const summary = renderSummary(results);
-  writeFileSync(join(OUT_DIR, 'summary.md'), summary);
   if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary);
   console.log(`\n${summary}`);
 }

@@ -244,11 +244,13 @@ The CI results agree with the local ones, with bigger absolute numbers on the sm
 
 **With Node's default heap limit** (no `--max-old-space-size`; 4.09 GB on the local machine), local:
 
-| Build | Result |
-| --- | --- |
-| `app0` from source | **out of memory**: `ERR_WORKER_OUT_OF_MEMORY: Worker terminated due to reaching memory limit: JS heap out of memory` |
-| `app0` incremental, `@angular/build:library` (libs + app) | ok |
-| `app0` incremental, ng-packagr (libs + app) | ok |
+| Build | Result | Wall time | Peak memory (all processes) |
+| --- | --- | --- | --- |
+| `app0` from source | **out of memory**: `ERR_WORKER_OUT_OF_MEMORY: Worker terminated due to reaching memory limit: JS heap out of memory` | 50.0s | 4.92 GB |
+| `app0` incremental, `@angular/build:library` (libs + app) | ok | 28.1s | 7.08 GB |
+| `app0` incremental, ng-packagr (libs + app) | ok | 39.8s | 8.32 GB |
+
+The incremental builds use *more* memory in total here, because Nx builds three libs at once, and they still succeed. What fails is a single process: building from source puts the whole app into one compiler, which has to fit in one heap. Every incremental process holds one lib or the app's own code and stays well below the limit.
 
 **With smaller heap limits**, building `app1` of the multi-app demo (9 libs, about 4,000 components), local:
 
@@ -294,7 +296,15 @@ Nx runs several tasks at once (3 by default), and their memory adds up. Building
 
 Lowering `--parallel` caps total memory at the cost of time: half the parallelism, twice the wall time. Incremental builds lower the peak per task, but a cold incremental build still runs three heavy tasks at once (lib builds of about 2 GB and app builds of 4–5 GB RSS each), so its total peak is only somewhat lower. The large savings come when few tasks rerun: when one lib changes, incremental builds peak at about half of what building from source needs.
 
-<!-- CI-MEMORY -->
+### On CI
+
+The memory experiments also ran on CI as one job on a 16 GB runner ([run 37803488489](https://github.com/ChristopherPHolder/nx-angular-incremental-build/actions/runs/37803488489)). It failed after 67 minutes with:
+
+> The hosted runner lost communication with the server. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error.
+
+The runner died before it could upload anything, and the script only wrote its results at the end, so nothing was recorded. Going by the timing, it died in the last experiment: building the 6 apps from source with 3 tasks at once, which needs roughly 15–17 GB on a 16 GB machine. The benchmark jobs build from source with 2 tasks at once; they peaked at 14.4–14.5 GB and survived.
+
+This is the practical version of the out-of-memory problem: building many apps from source in parallel doesn't fit on a standard GitHub-hosted runner, while the incremental builds of the same apps peak at about 8 GB. The workflow now runs each memory experiment as its own job, and the script saves its results after every build, so a runner that dies only loses the experiment it was running.
 
 ## What makes the new builder faster
 
